@@ -19,33 +19,32 @@ Theo file hướng dẫn `docs/lab/BAI_THUC_HANH_CAM_BIEN_AP_SUAT.docx`:
 ```text
 bmp280-kalman-survey/
 ├── .gitignore
-├── platformio.ini                  # PlatformIO project config
+├── platformio.ini                  # PlatformIO project config (ESP32-C3)
 ├── README.md
+├── EMA_Filter/
+│   └── EMA_Filter.ino             # Firmware lọc EMA (Exponential Moving Average)
+├── Kalman_Filter/
+│   └── Kalman_Filter.ino          # Firmware lọc Kalman
 ├── data/
 │   ├── dynamic/                    # Dữ liệu đặc tính động
-│   │   ├── 0,1.csv                #   RAW - alpha=0.1 (lọc mạnh)
-│   │   ├── 0,1_kalman.csv         #   Kalman - alpha=0.1
-│   │   ├── 0,3.csv                #   RAW - alpha=0.3 (cân bằng)
-│   │   ├── 0,3_kalman.csv         #   Kalman - alpha=0.3
-│   │   ├── 0,7.csv                #   RAW - alpha=0.7 (lọc yếu)
-│   │   └── 0,7_kalman.csv         #   Kalman - alpha=0.7
+│   │   ├── 0,1.csv                #   RAW - α = 0.1 (lọc mạnh)
+│   │   ├── 0,1_kalman.csv         #   Kalman - α = 0.1
+│   │   ├── 0,3.csv                #   RAW - α = 0.3 (cân bằng)
+│   │   ├── 0,3_kalman.csv         #   Kalman - α = 0.3
+│   │   ├── 0,7.csv                #   RAW - α = 0.7 (lọc yếu)
+│   │   └── 0,7_kalman.csv         #   Kalman - α = 0.7
 │   └── static/                     # Dữ liệu đặc tính tĩnh (trống)
 ├── docs/
 │   ├── lab/                        # Hướng dẫn thí nghiệm
-│   │   ├── BAI_THUC_HANH_CAM_BIEN_AP_SUAT.docx
-│   │   └── lab_instruction_1.pdf
+│   │   └── BAI_THUC_HANH_CAM_BIEN_AP_SUAT.docx
 │   └── references/                 # Datasheet & tài liệu tham khảo
 │       └── BST-BMP280-DS001-11.pdf
-├── EMA_Filter/
-│   └── EMA_Filter.ino             # Firmware lọc EMA (Exponential Moving Average)
-├── figures/
-│   ├── comparision table (2).png  # Bảng so sánh bộ lọc
-│   ├── comparision table.png
-│   ├── Figure_1.png               # Biểu đồ khảo sát
-│   ├── survey_report.png          # Báo cáo khảo sát
-│   └── survey_report_v2.png
-└── Kalman_Filter/
-    └── Kalman_Filter.ino          # Firmware lọc Kalman
+└── figures/                        # Hình ảnh kết quả
+    ├── comparision table (2).png
+    ├── comparision table.png
+    ├── Figure_1.png
+    ├── survey_report.png
+    └── survey_report_v2.png
 ```
 
 ## Phần cứng
@@ -67,29 +66,28 @@ Quy trình:
 - Đo chiều cao thực bằng thước để làm giá trị chuẩn.
 - Lưu dữ liệu độ cao theo thời gian.
 
-Dữ liệu thô và xử lý lưu tại `data/static/`.
+Dữ liệu lưu tại `data/static/`.
 
-### 2) Khảo sát đặc tính động (với EMA filter)
+### 2) Khảo sát đặc tính động (với bộ lọc Kalman & EMA)
 Mục đích:
 - Đánh giá đáp ứng khi độ cao thay đổi nhanh.
-- Quan sát ảnh hưởng của bộ lọc Kalman và EMA lên tín hiệu.
+- Quan sát ảnh hưởng của lọc Kalman và EMA lên tín hiệu.
 - So sánh chất lượng lọc với các hệ số α khác nhau (0.1, 0.3, 0.7).
 
 Dữ liệu động lưu tại `data/dynamic/` với định dạng:
-- `{alpha}.csv` — dữ liệu RAW
+- `{alpha}.csv` — dữ liệu RAW đo từ cảm biến
 - `{alpha}_kalman.csv` — dữ liệu sau lọc Kalman
 
 ## Firmware
 - **ESP32-C3** — PlatformIO project
-- `EMA_Filter/EMA_Filter.ino` — đo + lọc EMA, ghi log qua Serial
+- `EMA_Filter/EMA_Filter.ino` — đo + lọc EMA (Exponential Moving Average), ghi log qua Serial
 - `Kalman_Filter/Kalman_Filter.ino` — đo + lọc Kalman, ghi log qua Serial
 
 ## Cách chạy
 
 ### 1) Nạp firmware
 ```bash
-# Mở folder trong PlatformIO (VS Code)
-# Chọn đúng board: ESP32-C3 Super Mini
+# Dùng PlatformIO (VS Code)
 pio run --target upload --environment esp32-c3-devkitm-1
 ```
 
@@ -111,9 +109,8 @@ Xem trong thư mục `figures/`:
 
 ## Tài liệu tham khảo
 - Hướng dẫn bài thực hành: `docs/lab/BAI_THUC_HANH_CAM_BIEN_AP_SUAT.docx`
-- Lab instruction (PDF): `docs/lab/lab_instruction_1.pdf`
 - Datasheet BMP280: `docs/references/BST-BMP280-DS001-11.pdf`
 
 ## Ghi chú
 - Dữ liệu động được thu thập với 3 mức lọc EMA: α = 0.1 (lọc mạnh), 0.3 (cân bằng), 0.7 (lọc yếu), kèm lọc Kalman song song.
-- Dữ liệu tĩnh chưa được cập nhật.
+- Dữ liệu tĩnh chưa được cập nhật trong bản này.
