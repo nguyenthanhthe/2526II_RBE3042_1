@@ -1,0 +1,16 @@
+.pio/
+.pioenvs/
+.piolibdeps/
+__pycache__/
+*.o
+*.d
+*.a
+*.elf
+*.bin
+*.map
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
