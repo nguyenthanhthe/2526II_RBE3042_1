@@ -100,8 +100,10 @@ void setup() {
     // ---------------------------------------------
 
     // Timer bù trừ độ trễ, đảm bảo đúng 50ms mỗi vòng lặp
-    while (millis() - loop_start < (1000 / SAMPLE_RATE_HZ)) {
-      // Đợi...
+    unsigned long elapsed = millis() - loop_start;
+    unsigned long period = 1000 / SAMPLE_RATE_HZ;
+    if (elapsed < period) {
+      delay(period - elapsed);
     }
   }
 
