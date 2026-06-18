@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng kết Cảm biến và Đo lường — 2526II_RBE3042_1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-secondary: #111827;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-rose: #f43f5e;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(148, 163, 184, 0.12);
+            --gradient-1: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            --gradient-2: linear-gradient(135deg, #06b6d4, #10b981);
+            --gradient-3: linear-gradient(135deg, #f59e0b, #f43f5e);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        /* ── Slide Container ── */
+        .slideshow {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 80px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(60px);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .slide.prev {
+            transform: translateX(-60px);
+        }
+
+        /* ── Background Effects ── */
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: -200px; right: -200px;
+            width: 600px; height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59,130,246,0.08), transparent 70%);
+            pointer-events: none;
+        }
+
+        .slide::after {
+            content: '';
+            position: absolute;
+            bottom: -200px; left: -200px;
+            width: 500px; height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(139,92,246,0.06), transparent 70%);
+            pointer-events: none;
+        }
+
+        /* ── Slide Content ── */
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* ── Cover Slide ── */
+        .cover-slide .slide-content {
+            text-align: center;
+        }
+
+        .cover-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--accent-blue);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .cover-title {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+
+        .cover-subtitle {
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .cover-meta {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .cover-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .cover-meta-item .dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+        }
+
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .team-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px 28px;
+            text-align: center;
+            backdrop-filter: blur(20px);
+        }
+
+        .team-card .name {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .team-card .id {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ── Section Titles ── */
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            padding: 6px 16px;
+            border-radius: 6px;
+        }
+
+        .section-label.blue   { color: var(--accent-blue); background: rgba(59,130,246,0.1); }
+        .section-label.cyan   { color: var(--accent-cyan); background: rgba(6,182,212,0.1); }
+        .section-label.purple { color: var(--accent-purple); background: rgba(139,92,246,0.1); }
+        .section-label.green  { color: var(--accent-green); background: rgba(16,185,129,0.1); }
+        .section-label.amber  { color: var(--accent-amber); background: rgba(245,158,11,0.1); }
+        .section-label.rose   { color: var(--accent-rose); background: rgba(244,63,94,0.1); }
+
+        .slide-title {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #f1f5f9, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ── Data Cards ── */
+        .cards-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .cards-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+        .cards-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+        .cards-grid.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+        .data-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(20px);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .data-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .data-card .card-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .data-card .card-title {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .data-card .card-value {
+            font-size: 28px;
+            font-weight: 800;
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 6px;
+        }
+
+        .data-card .card-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .data-card .card-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        /* ── Color accents ── */
+        .text-blue   { color: var(--accent-blue); }
+        .text-cyan   { color: var(--accent-cyan); }
+        .text-purple { color: var(--accent-purple); }
+        .text-green  { color: var(--accent-green); }
+        .text-amber  { color: var(--accent-amber); }
+        .text-rose   { color: var(--accent-rose); }
+
+        /* ── Table ── */
+        .styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-top: 16px;
+        }
+
+        .styled-table th {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .styled-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .styled-table tr:hover td {
+            background: rgba(59, 130, 246, 0.03);
+        }
+
+        .styled-table .highlight {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* ── Bullet List ── */
+        .bullet-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .bullet-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .bullet-list li .bullet {
+            width: 8px; height: 8px;
+            min-width: 8px;
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+
+        .bullet-list li strong {
+            color: var(--text-primary);
+        }
+
+        /* ── Equation ── */
+        .equation-box {
+            background: rgba(139, 92, 246, 0.08);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 12px;
+            padding: 20px 28px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+            color: var(--accent-purple);
+            text-align: center;
+            margin: 16px 0;
+        }
+
+        /* ── Layout helpers ── */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+
+        .flex-col { display: flex; flex-direction: column; }
+        .gap-16 { gap: 16px; }
+        .gap-24 { gap: 24px; }
+        .mt-16 { margin-top: 16px; }
+        .mt-24 { margin-top: 24px; }
+
+        /* ── Progress Bar / Timeline ── */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            position: relative;
+            padding-left: 32px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px; top: 8px; bottom: 8px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-blue), var(--accent-purple), var(--accent-green), var(--accent-amber), var(--accent-rose));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 14px 0 14px 24px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px; top: 20px;
+            width: 12px; height: 12px;
+            border-radius: 50%;
+            border: 2px solid;
+            background: var(--bg-primary);
+        }
+
+        .timeline-item:nth-child(1)::before { border-color: var(--accent-blue); }
+        .timeline-item:nth-child(2)::before { border-color: var(--accent-purple); }
+        .timeline-item:nth-child(3)::before { border-color: var(--accent-green); }
+        .timeline-item:nth-child(4)::before { border-color: var(--accent-amber); }
+        .timeline-item:nth-child(5)::before { border-color: var(--accent-rose); }
+
+        .timeline-item .tl-week {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .timeline-item .tl-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .timeline-item .tl-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ── Navigation ── */
+        .nav-bar {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 40px;
+            background: rgba(10, 14, 26, 0.9);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        .nav-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            opacity: 0.3;
+        }
+
+        .nav-dot.active {
+            background: var(--accent-blue);
+            opacity: 1;
+            transform: scale(1.3);
+        }
+
+        .nav-info {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .nav-btns {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: var(--accent-blue);
+        }
+
+        /* ── Key Finding Highlight ── */
+        .key-finding {
+            background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(6,182,212,0.08));
+            border: 1px solid rgba(16,185,129,0.2);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 20px;
+        }
+
+        .key-finding .kf-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .key-finding .kf-text {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 900px) {
+            .slide { padding: 30px 24px; }
+            .cover-title { font-size: 36px; }
+            .slide-title { font-size: 26px; }
+            .two-col { grid-template-columns: 1fr; }
+            .cards-grid.cols-3, .cards-grid.cols-4 { grid-template-columns: 1fr 1fr; }
+            .team-grid { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="slideshow" id="slideshow">
+
+    <!-- ══════════ SLIDE 0: COVER ══════════ -->
+    <div class="slide cover-slide active" data-index="0">
+        <div class="slide-content">
+            <div class="cover-badge">📡 2526II_RBE3042_1</div>
+            <h1 class="cover-title">Cảm biến và Đo lường</h1>
+            <p class="cover-subtitle">Khảo sát đặc tính cảm biến áp suất GY-BMP280<br>& Ứng dụng các bộ lọc số (Kalman, EMA, IIR)</p>
+            <div class="cover-meta">
+                <span class="cover-meta-item"><span class="dot" style="background:var(--accent-blue)"></span> Trường ĐH Công nghệ — ĐHQGHN</span>
+                <span class="cover-meta-item"><span class="dot" style="background:var(--accent-cyan)"></span> K69E-RE1</span>
+                <span class="cover-meta-item"><span class="dot" style="background:var(--accent-green)"></span> 5 Báo cáo tuần</span>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="name">Nguyễn Thanh Thế</div>
+                    <div class="id">24022911</div>
+                </div>
+                <div class="team-card">
+                    <div class="name">Phạm Quốc Hưng</div>
+                    <div class="id">24022877</div>
+                </div>
+                <div class="team-card">
+                    <div class="name">Trần Thanh Tùng</div>
+                    <div class="id">24022927</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════ SLIDE 1: TỔNG QUAN TIMELINE ══════════ -->
+    <div class="slide" data-index="1">
+        <div class="slide-content">
+            <span class="section-label blue">Tổng quan</span>
+            <h2 class="slide-title">Lộ trình 5 tuần thực nghiệm</h2>
+            <div class="two-col">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="tl-week text-blue">Tuần 1</div>
+                        <div class="tl-title">Bộ lọc Kalman 1D trên ESP32-C3</div>
+                        <div class="tl-desc">Thiết kế, triển khai và đánh giá ảnh hưởng thông số Q</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="tl-week text-purple">Tuần 2</div>
+                        <div class="tl-title">Đặc tính tĩnh, Oversampling & IIR</div>
+                        <div class="tl-desc">4 khảo sát trên Arduino Uno: tĩnh, OS, IIR, nhiệt độ</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="tl-week text-green">Tuần 3</div>
+                        <div class="tl-title">Đặc tính động & Bộ lọc EMA</div>
+                        <div class="tl-desc">So sánh α = 0.1 / 0.3 / 0.7 trên ESP8266, 475 mẫu</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="tl-week text-amber">Tuần 4</div>
+                        <div class="tl-title">Range, Resolution, Linearity, Accuracy</div>
+                        <div class="tl-desc">Đo 5 tầng cầu thang, hồi quy tuyến tính, 200 mẫu</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="tl-week text-rose">Tuần 5</div>
+                        <div class="tl-title">IIR nội bộ & Hiệu ứng Self-Heating</div>
+                        <div class="tl-desc">Normal Mode vs Forced Mode, ΔT = +0.47°C</div>
+                    </div>
+                </div>
+                <div class="flex-col gap-16">
+                    <div class="data-card">
+                        <div class="card-icon">🔬</div>
+                        <div class="card-title">Phạm vi nghiên cứu</div>
+                        <div class="card-desc">Khảo sát toàn diện <strong>6 đặc tính</strong> của cảm biến BMP280: tĩnh, động, oversampling, IIR filter, ảnh hưởng nhiệt độ, self-heating</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="card-icon">📊</div>
+                        <div class="card-title">Quy mô dữ liệu</div>
+                        <div class="card-desc">Tổng cộng hơn <strong>1,200+ mẫu</strong> áp suất & nhiệt độ thu thập qua 3 vi điều khiển (ESP32-C3, ESP8266, Arduino Uno)</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="card-icon">⚙️</div>
+                        <div class="card-title">Bộ lọc số</div>
+                        <div class="card-desc">So sánh <strong>3 bộ lọc</strong>: Kalman 1D, EMA (3 mức α), IIR nội bộ BMP280 (5 mức)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════ SLIDE 2: TUẦN 1 — KALMAN ══════════ -->
+    <div class="slide" data-index="2">
+        <div class="slide-content">
+            <span class="section-label blue">Tuần 1</span>
+            <h2 class="slide-title">Bộ lọc Kalman 1 chiều trên ESP32-C3</h2>
+            <div class="two-col">
+                <div class="flex-col gap-16">
+                    <div class="equation-box">
+                        K = p_pred / (p_pred + R)<br>
+                        x_est = x_est + K · (z − x_est)
+                    </div>
+                    <ul class="bullet-list">
+                        <li><span class="bullet" style="background:var(--accent-blue)"></span><strong>Predict:</strong> Ước lượng trạng thái và tăng hiệp phương sai theo nhiễu quá trình Q</li>
+                        <li><span class="bullet" style="background:var(--accent-cyan)"></span><strong>Update:</strong> Tính Kalman Gain K, hiệu chỉnh bằng phép đo thực z từ BMP280</li>
+                        <li><span class="bullet" style="background:var(--accent-purple)"></span><strong>Cấu hình:</strong> 20Hz, 400 mẫu/20s, IIR OFF, R = 1.0</li>
+                    </ul>
+                </div>
+                <div class="flex-col gap-16">
+                    <div class="data-card">
+                        <div class="card-label">Q = 0.011</div>
+                        <div class="card-title text-blue">Lọc cực mạnh — Phản hồi chậm</div>
+                        <div class="card-desc">Đường cực kỳ mượt, triệt tiêu hoàn toàn nhiễu. Nhưng trễ pha nặng khi chuyển trạng thái.</div>
+                    </div>
+                    <div class="data-card" style="border-color: rgba(16,185,129,0.3);">
+                        <div class="card-label">Q = 0.128 ✦ tối ưu</div>
+                        <div class="card-title text-green">Cân bằng tối ưu</div>
+                        <div class="card-desc">Đạt sự cân bằng tốt nhất giữa khử nhiễu tĩnh và đáp ứng nhanh khi chuyển mức.</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="card-label">Q = 1.633</div>
+                        <div class="card-title text-amber">Bám sát Raw — Nhiễu cao</div>
+                        <div class="card-desc">Phản ứng tức thời nhưng gần như không lọc nhiễu, đường Kalman dao động lớn.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════ SLIDE 3: TUẦN 2 ══════════ -->
+    <div class="slide" data-index="3">
+        <div class="slide-content">
+            <span class="section-label purple">Tuần 2</span>
+            <h2 class="slide-title">Đặc tính tĩnh & Oversampling & IIR & Nhiệt độ</h2>
+            <div class="cards-grid cols-4">
+                <div class="data-card">
+                    <div class="card-icon">📐</div>
+                    <div class="card-title">Đặc tính tĩnh</div>
+                    <div class="card-value text-blue">R² ≈ 0.999</div>
+                    <div class="card-desc">10 bậc thang, 80 mẫu/bậc<br>Sai số TB: <strong>0.016 m</strong><br>Hệ số góc: 0.168 m/bậc</div>
+                </div>
+                <div class="data-card">
+                    <div class="card-icon">🔧</div>
+                    <div class="card-title">Oversampling</div>
+                    <div class="card-value text-cyan">X4 ✦</div>
+                    <div class="card-desc">Std giảm <strong>34%</strong> từ X2→X4<br>Bước nhảy lớn nhất<br>X4 = tối ưu tốc độ/chất lượng</div>
+                </div>
+                <div class="data-card">
+                    <div class="card-icon">📉</div>
+                    <div class="card-title">IIR Filter</div>
+                    <div class="card-value text-purple">X4 ✦</div>
+                    <div class="card-desc">Std giảm <strong>33.9%</strong><br>X16 bị drift −0.07m<br>X4 cân bằng mượt/nhanh</div>
+                </div>
+                <div class="data-card">
+                    <div class="card-icon">🌡️</div>
+                    <div class="card-title">Ảnh hưởng nhiệt độ</div>
+                    <div class="card-value text-rose">−0.74 m</div>
+                    <div class="card-desc">Bù nhiệt tốt khi ổn định<br>Lệch max khi T thay đổi đột ngột<br>30→46.8°C→30°C</div>
+                </div>
+            </div>
+            <div class="key-finding">
+                <div class="kf-title">🎯 Kết luận Tuần 2</div>
+                <div class="kf-text">BMP280 có đặc tính tuyến tính xuất sắc. Cấu hình tối ưu: <strong>Oversampling X4 + IIR Filter X4</strong> — giảm nhiễu ~34% mà không làm chậm phản hồi. Tránh đặt gần nguồn nhiệt thay đổi đột ngột.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════ SLIDE 4: TUẦN 3 — EMA ══════════ -->
+    <div class="slide" data-index="4">
+        <div class="slide-content">
+            <span class="section-label green">Tuần 3</span>
+            <h2 class="slide-title">Đặc tính động & Bộ lọc EMA</h2>
+            <div class="two-col">
+                <div class="flex-col gap-16">
+                    <div class="equation-box">y[n] = α · x[n] + (1 − α) · y[n−1]</div>
+                    <table class="styled-table">
+                        <thead>
+                            <tr><th>Bộ lọc</th><th>T_rise</th><th>σ (m)</th><th>SNR</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Raw</td><td>7,199 ms</td><td class="highlight">0.184</td><td>26.6 dB</td></tr>
+                            <tr><td>α = 0.7</td><td>7,199 ms</td><td>0.158</td><td>27.9 dB</td></tr>
+                            <tr><td>α = 0.3</td><td>7,300 ms</td><td>0.122</td><td>30.2 dB</td></tr>
+                            <tr><td style="color:var(--accent-green);font-weight:600">α = 0.1 ✦</td><td>7,500 ms</td><td class="highlight" style="color:var(--accent-green)">0.085</td><td style="color:var(--accent-green);font-weight:600">33.3 dB</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="flex-col gap-16">
+                    <div class="data-card">
+                        <div class="card-label">Chỉ số quan trọng nhất</div>
+                        <div class="card-title">T_settle (±5% band)</div>
+                        <div class="card-value text-green">27.5 s</div>
+                        <div class="card-desc">Chỉ có α=0.1 đạt T_settle định lượng được. Raw, α=0.7, α=0.3 đều <strong>KHÔNG settle</strong> trong 47s thu mẫu.</div>
+                    </div>
+                    <div class="data-card">
+                        <div class="card-label">Cải thiện nhiễu</div>
+                        <div class="card-title">σ giảm 54%</div>
+                        <div class="card-value text-cyan">+6.7 dB</div>
+                        <div class="card-desc">EMA α=0.1 giảm σ từ 0.184m xuống 0.085m — cải thiện SNR 6.7 dB so với Raw.</div>
+                    </div>
+                    <div class="key-finding" style="margin-top:0">
+                        <div class="kf-title">🎯 Khuyến nghị</div>
+                        <div class="kf-text"><strong>Đo tĩnh:</strong> α = 0.1–0.2<br><strong>UAV/drone:</strong> α = 0.7+ kết hợp Kalman + IMU</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════ SLIDE 5: TUẦN 4 ══════════ -->
+    <div class="slide" data-index="5">
+        <div class="slide-content">
+            <span class="section-label amber">Tuần 4</span>
+            <h2 class="slide-title">Đặc tính tĩnh: Range, Resolution, Linearity, Accuracy</h2>
+            <div class="two-col">
+                <div class="flex-col gap-16">
+                    <div class="cards-grid cols-2">
+                        <div class="data-card">
+                            <div class="card-label">Range</div>
+                            <div class="card-value text-amber">17.12 m</div>
+                            <div class="card-desc">5 tầng cầu thang</div>
+                        </div>
+                        <div class="data-card">
+                            <div class="card-label">Resolution (intra-run)</div>
+                            <div class="card-value text-green">2.7 cm</div>
+                            <div class="card-desc">Tốt hơn datasheet <strong>6 lần</strong></div>
+                        </div>
+                        <div class="data-card">
+                            <div class="card-label">R² Linearity</div>
+                            <div class="card-value text-blue">0.9908</div>
+                            <div class="card-desc">Tuyến tính rất tốt</div>
+                        </div>
+                        <div class="data-card">
+                            <div class="card-label">RMSE</div>
+                            <div class="card-value text-rose">1.51 m</div>
+                            <div class="card-desc">Bị outlier T5 (+3.12m)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-col gap-16">
+                    <div class="data-card">
+                        <div class="card-icon">📊</div>
+                        <div class="card-title">Hệ số hồi quy tuyến tính</div>
+                        <div class="card-desc">
+                            <strong>Slope a = 1.1837</strong> (lý tưởng: 1.0) → Sensor đo cao hơn 18%<br>
+                            <strong>Intercept b = −0.223 m</strong> (lý tưởng: 0) → Không offset<br><br>
+                            Giả thuyết: Chiều cao tầng thực ≈ 4.1 m thay vì 3.5 m + drift áp suất
+                        </div>
+                    </div>
+                    <div class="key-finding" style="margin-top:0">
+                        <div class="kf-title">🎯 Phát hiện nổi bật</div>
+                        <div class="kf-text">Resolution thực tế <strong>2.7 cm</strong> tốt hơn datasheet (16 cm) nhờ OS×16 + IIR×16. Nếu loại T5, RMSE chỉ <strong>0.63 m</strong> và R² = <strong>0.998</strong>.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════ SLIDE 6: TUẦN 5 ══════════ -->
+    <div class="slide" data-index="6">
+        <div class="slide-content">
+            <span class="section-label rose">Tuần 5</span>
+            <h2 class="slide-title">Bộ lọc IIR nội bộ & Hiệu ứng tự gia nhiệt</h2>
+            <div class="two-col">
+                <div class="flex-col gap-16">
+                    <div class="data-card" style="border-left: 3px solid var(--accent-cyan);">
+                        <div class="card-title">Thí nghiệm 1: IIR Filter</div>
+                        <div class="card-desc" style="margin-top:8px">
+                            <strong>Phát hiện bất ngờ:</strong> σ tổng khi BẬT IIR lại LỚN HƠN khi TẮT!<br><br>
+                            <strong>Giải thích:</strong> IIR là low-pass filter → xóa nhiễu cao tần → lộ ra drift dài hạn bị ẩn bên dưới.<br><br>
+                            <strong>Chỉ số đúng:</strong> Bước nhảy |Δ| giữa 2 mẫu liên tiếp:
+                        </div>
+                    </div>
+                    <div class="cards-grid cols-2">
+                        <div class="data-card">
+                            <div class="card-label">|Δ|max TẮT IIR</div>
+                            <div class="card-value text-rose">0.100 hPa</div>
+                        </div>
+                        <div class="data-card">
+                            <div class="card-label">|Δ|max BẬT IIR ×16</div>
+                            <div class="card-value text-green">0.010 hPa</div>
+                            <div class="card-desc">Giảm chính xác <strong>10×</strong></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-col gap-16">
+                    <div class="data-card" style="border-left: 3px solid var(--accent-amber);">
+                        <div class="card-title">Thí nghiệm 2: Self-Heating</div>
+                        <div class="card-desc" style="margin-top:8px">
+                            <strong>Normal Mode</strong> (OS×16, duty 99%):<br>
+                            ΔT = <span style="color:var(--accent-rose);font-weight:700">+0.47°C</span> trong 130s — đúng mô hình Newton<br><br>
+                            <strong>Forced Mode</strong> (sleep 5s, duty 0.1%):<br>
+                            ΔT = <span style="color:var(--accent-green);font-weight:700">−0.29°C</span> — KHÔNG self-heating<br><br>
+                            Sai số 0.47°C → ~1 Pa → <strong>~8.4 cm sai số độ cao</strong>
+                        </div>
+                    </div>
+                    <div class="key-finding" style="margin-top:0">
+                        <div class="kf-title">🎯 Khuyến nghị cấu hình</div>
+                        <div class="kf-text"><strong>UAV:</strong> Normal + IIR×16 + chấp nhận self-heating<br><strong>IoT/Weather:</strong> Forced Mode + sleep → không self-heating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════ SLIDE 7: TỔNG KẾT ══════════ -->
+    <div class="slide" data-index="7">
+        <div class="slide-content">
+            <span class="section-label green">Tổng kết</span>
+            <h2 class="slide-title">Kết luận & Cấu hình khuyến nghị</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr><th>Tuần</th><th>Khảo sát</th><th>Phát hiện chính</th><th>Chỉ số định lượng</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="highlight text-blue">1</td>
+                        <td>Bộ lọc Kalman 1D</td>
+                        <td>Q = 0.128 là giá trị tối ưu</td>
+                        <td>R = 1.0, 20Hz, 400 mẫu</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight text-purple">2</td>
+                        <td>Tĩnh + OS + IIR + Nhiệt</td>
+                        <td>OS X4 & IIR X4 tối ưu, R² ≈ 0.999</td>
+                        <td>Std giảm 34%, sai số 0.016m</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight text-green">3</td>
+                        <td>Đặc tính động + EMA</td>
+                        <td>α = 0.1 duy nhất settle được (±5%)</td>
+                        <td>σ: 0.184→0.085m, SNR +6.7dB</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight text-amber">4</td>
+                        <td>Range/Resolution/Linearity</td>
+                        <td>Resolution 2.7cm — tốt hơn DS 6×</td>
+                        <td>R² = 0.991, RMSE = 1.51m</td>
+                    </tr>
+                    <tr>
+                        <td class="highlight text-rose">5</td>
+                        <td>IIR nội bộ + Self-Heating</td>
+                        <td>IIR giảm |Δ| 10×, Self-heat +0.47°C</td>
+                        <td>Forced Mode triệt tiêu hoàn toàn</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="cards-grid cols-2 mt-24">
+                <div class="key-finding" style="margin-top:0">
+                    <div class="kf-title">🚁 Cấu hình cho UAV / Drone</div>
+                    <div class="kf-text">MODE_NORMAL + OS_P×16 + IIR×16<br>EMA α=0.7 hoặc Kalman Q=0.128<br>Chấp nhận self-heating +0.47°C</div>
+                </div>
+                <div class="key-finding" style="margin-top:0; background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(139,92,246,0.08)); border-color: rgba(59,130,246,0.2);">
+                    <div class="kf-title" style="color:var(--accent-blue)">🌤️ Cấu hình cho IoT / Weather Station</div>
+                    <div class="kf-text">MODE_FORCED + OS_P×16 + chu kỳ 30–60s<br>EMA α=0.1 hoặc Kalman Q=0.011<br>Không self-heating, tiết kiệm pin</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════ SLIDE 8: CÁM ƠN ══════════ -->
+    <div class="slide cover-slide" data-index="8">
+        <div class="slide-content">
+            <div class="cover-badge">🎓 2526II_RBE3042_1</div>
+            <h1 class="cover-title">Cảm ơn thầy cô<br>và các bạn!</h1>
+            <p class="cover-subtitle">Nhóm sinh viên K69E-RE1 — Trường ĐH Công nghệ, ĐHQGHN</p>
+            <div class="cover-meta" style="margin-top:40px">
+                <span class="cover-meta-item"><span class="dot" style="background:var(--accent-blue)"></span> Nguyễn Thanh Thế</span>
+                <span class="cover-meta-item"><span class="dot" style="background:var(--accent-cyan)"></span> Phạm Quốc Hưng</span>
+                <span class="cover-meta-item"><span class="dot" style="background:var(--accent-green)"></span> Trần Thanh Tùng</span>
+            </div>
+            <div style="margin-top:40px; color: var(--text-muted); font-size: 14px;">
+                📁 github.com/nguyenthanhthe/2526II_RBE3042_1
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ── Navigation Bar ── -->
+<div class="nav-bar">
+    <div class="nav-dots" id="navDots"></div>
+    <div class="nav-info" id="navInfo">1 / 9</div>
+    <div class="nav-btns">
+        <button class="nav-btn" onclick="prevSlide()">← Trước</button>
+        <button class="nav-btn" onclick="nextSlide()">Tiếp →</button>
+    </div>
+</div>
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+
+    // Generate dots
+    const dotsContainer = document.getElementById('navDots');
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('button');
+        dot.classList.add('nav-dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+
+    function updateSlide(newIndex) {
+        if (newIndex < 0 || newIndex >= totalSlides || newIndex === currentIndex) return;
+
+        const oldSlide = slides[currentIndex];
+        const newSlide = slides[newIndex];
+
+        oldSlide.classList.remove('active');
+        oldSlide.classList.add(newIndex > currentIndex ? 'prev' : '');
+        setTimeout(() => oldSlide.classList.remove('prev'), 600);
+
+        newSlide.classList.add('active');
+
+        // Update dots
+        document.querySelectorAll('.nav-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === newIndex);
+        });
+
+        document.getElementById('navInfo').textContent = `${newIndex + 1} / ${totalSlides}`;
+        currentIndex = newIndex;
+    }
+
+    function nextSlide() { updateSlide(currentIndex + 1); }
+    function prevSlide() { updateSlide(currentIndex - 1); }
+    function goToSlide(i) { updateSlide(i); }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+        if (e.key === 'Home') { e.preventDefault(); goToSlide(0); }
+        if (e.key === 'End') { e.preventDefault(); goToSlide(totalSlides - 1); }
+    });
+
+    // Touch swipe
+    let touchStartX = 0;
+    document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+    document.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) { diff > 0 ? nextSlide() : prevSlide(); }
+    });
+</script>
+
+</body>
+</html>
