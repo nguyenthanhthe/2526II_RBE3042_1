@@ -50,7 +50,7 @@ Workspace được tổ chức khoa học theo cấu trúc sau:
 │   ├── lectures/              # Bài giảng & Slide môn học đã số hóa (.md)
 │   │   ├── Chappter 5.2 ADC-Sampling and Filter.md
 │   │   ├── EP10 Pressure.md
-│   │   └── ... (21 tệp bài giảng chương/tuần)
+│   │   └── ... (10 tệp bài giảng chương/tuần)
 │   └── references/            # Giáo trình & Datasheets (Mục lục & Tóm tắt)
 │       ├── Handbook of modern sensors...md
 │       ├── lsm6dsv16x.md
@@ -75,14 +75,15 @@ Tập tài liệu ngân hàng câu hỏi chi tiết phục vụ thi vấn đáp 
 
 ---
 
-## 📖 Bài giảng & Slide Môn học (Số hóa sang Markdown)
-Toàn bộ slide bài giảng đã được trích xuất nội dung văn bản và hình ảnh tương ứng sang định dạng Markdown:
+## 📖 Bài giảng & Slide Môn học (Số hóa sang Markdown - Tập trung vào BMP280)
+Toàn bộ slide bài giảng liên quan trực tiếp đến cảm biến áp suất, mạch cầu đo, mạch xử lý tín hiệu và các bộ lọc số đã được trích xuất nội dung văn bản và hình ảnh tương ứng sang định dạng Markdown:
 * **Áp suất & Cảm biến áp suất:** [EP10 Pressure](./docs/lectures/EP10%20Pressure.md)
 * **Lấy mẫu & Bộ lọc số:** [Chappter 5.2 ADC-Sampling and Filter](./docs/lectures/Chappter%205.2%20ADC-Sampling%20and%20Filter.md)
 * **Mạch đo cảm biến:** [EP5 Circuits for Sensors](./docs/lectures/EP5%20Circuits%20for%20Sensors.md) & [EP5b Interface Electronic Circuits](./docs/lectures/EP5b%20Interface%20Electronic%20Circuits.md)
-* **Sai số & Đo lường:** [EP3 Errors during the measurement process](./docs/lectures/EP3%20Errors%20during%20the%20measurement%20process.md)
+* **Mạch tiền xử lý tín hiệu:** [Chương 4: Mạch đo lường và xử lý tín hiệu lối ra cảm biến](./docs/lectures/Chương%204.md) & Khuếch đại đo lường [AD620](./docs/lectures/AD620.md)
+* **Lý thuyết đo lường & Sai số:** [EP3 Errors during the measurement process](./docs/lectures/EP3%20Errors%20during%20the%20measurement%20process.md) & [EP2 Measurement Systems](./docs/lectures/EP2%20Measurement%20Systems.md)
 * **Đề cương ôn tập khoa học:** [Đề cương ôn tập kỹ thuật đo lường và cảm biến](./docs/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450.md)
-* [Xem toàn bộ 21 tệp bài giảng số hóa tại đây](./docs/lectures/)
+* [Xem toàn bộ 10 tệp bài giảng số hóa tại đây](./docs/lectures/)
 
 ---
 

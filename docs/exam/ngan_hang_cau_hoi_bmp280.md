@@ -14,6 +14,7 @@
 ### ✅ Gợi ý trả lời
 
 ![Cấu trúc MEMS BMP280](../../figures/exam/bmp280_mems_structure.png)
+*Hình 1.1: Sơ đồ mặt cắt cấu trúc MEMS áp điện trở của BMP280. Khoang chân không kín bên dưới màng tạo áp suất tham chiếu tuyệt đối $P_{ref} = 0$, khi áp suất khí quyển tác động làm màng silicon mỏng biến dạng dẫn đến biến đổi điện trở của các phần tử áp điện trở cấy trên bề mặt.*
 
 **Cấu tạo (từ dưới lên):**
 1. **Đế silicon (substrate):** Nền cứng đỡ toàn bộ cấu trúc.
@@ -44,6 +45,7 @@
 ### ✅ Gợi ý trả lời
 
 ![Cầu Wheatstone](../../figures/exam/wheatstone_bridge.png)
+*Hình 1.2: Sơ đồ nguyên lý cầu vi sai Wheatstone gồm 4 điện trở áp điện đặt trên màng silicon. Cấu hình này giúp triệt tiêu nhiễu chế độ chung và nhiệt độ, đồng thời tăng độ nhạy đầu ra gấp 4 lần nhờ việc bố trí 2 điện trở tăng điện trở ($+\Delta R$) và 2 điện trở giảm điện trở ($-\Delta R$) xen kẽ.*
 
 **Sơ đồ cầu Wheatstone:**
 - 4 điện trở khuếch tán R₁, R₂, R₃, R₄ bố trí trên màng silicon
@@ -214,6 +216,7 @@ $$\tau = \frac{-\Delta t}{\ln(1-\alpha)}$$
 | **0.1** | 949 | **0.085** | **33.3** | 7,500 | **27.5 s** ✓ |
 
 ![So sánh Kalman vs EMA](../../figures/exam/kalman_vs_ema.png)
+*Hình 1.3: Đồ thị so sánh phản hồi động của bộ lọc Kalman 1D ($Q=0.128, R=1.0$) và bộ lọc EMA ($\alpha=0.1$). Trục hoành là thời gian lấy mẫu, trục tung là độ cao quy đổi. Nhìn vào đồ thị ta thấy bộ lọc EMA ($\alpha=0.1$) có thời gian trễ pha (phase lag) lớn hơn đáng kể trong các bước nhảy độ cao đột ngột, trong khi bộ lọc Kalman bám sát giá trị thực nhanh hơn mà vẫn giữ được độ mịn cao.*
 
 **Trade-off cốt lõi:**
 - α nhỏ → τ lớn → **lọc mạnh, phản hồi chậm** (σ thấp, T_rise cao)
@@ -306,6 +309,7 @@ Viết lại: $y[n] = \frac{1}{c} \cdot x[n] + \frac{c-1}{c} \cdot y[n-1]$
 ### ✅ Gợi ý trả lời
 
 ![Self-Heating Effect](../../figures/exam/self_heating.png)
+*Hình 1.4: Biểu đồ thực nghiệm hiện tượng tự gia nhiệt (Self-Heating) của BMP280. Trong chế độ Normal Mode (đo liên tục ở tần số cao), công suất tiêu thụ Joule tỏa ra làm nhiệt độ cảm biến tăng tiệm cận hàm mũ thêm $+0.47^\circ\text{C}$ và mất ~130 giây để bão hòa. Chế độ Forced Mode (chỉ đo khi yêu cầu rồi ngủ sâu) giảm công suất tiêu thụ trung bình và loại bỏ hoàn toàn hiện tượng tự gia nhiệt này.*
 
 **Cơ chế vật lý:** Dòng điện qua cầu Wheatstone và ADC sinh nhiệt theo định luật Joule ($P = I^2R$). Ở Normal Mode + OS×16: dòng ~720 µA, duty cycle ~99% → lõi silicon nóng lên cục bộ.
 
