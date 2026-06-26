@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Ngan hang Cau hoi BMP280"
+nav_order: 1
+---
+
 # 📚 Ngân hàng Câu hỏi Vấn đáp Cuối kỳ — Cảm biến BMP280
 
 > **Môn:** Cảm biến và Đo lường cho Robot (RBE3042)

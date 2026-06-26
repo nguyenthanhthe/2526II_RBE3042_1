@@ -1,3 +1,10 @@
+---
+layout: default
+title: "EP5: Mạch cho Cảm biến"
+nav_order: 5
+parent: Bài giảng
+---
+
 # EP5 Circuits for Sensors
 
 > Tài liệu chuyển đổi từ PDF: `EP5 Circuits for Sensors.pdf`

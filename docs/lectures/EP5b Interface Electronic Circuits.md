@@ -1,3 +1,10 @@
+---
+layout: default
+title: "EP5b: Mạch Giao tiếp"
+nav_order: 6
+parent: Bài giảng
+---
+
 # EP5b Interface Electronic Circuits
 
 > Tài liệu chuyển đổi từ PDF: `EP5b Interface Electronic Circuits.pdf`

@@ -1,3 +1,10 @@
+---
+layout: default
+title: "EP2: Hệ thống Đo lường"
+nav_order: 2
+parent: Bài giảng
+---
+
 # EP2 Measurement Systems
 
 > Tài liệu chuyển đổi từ PDF: `EP2 Measurement Systems.pdf`

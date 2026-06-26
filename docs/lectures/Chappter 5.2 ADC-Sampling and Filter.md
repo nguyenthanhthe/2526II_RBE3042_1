@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Chappter 5.2 ADC-Sampling and Filter"
+nav_order: 99
+parent: "Bai giang"
+---
+
 # Chappter 5.2 ADC-Sampling and Filter
 
 > Tài liệu chuyển đổi từ PPTX: `Chappter 5.2 ADC-Sampling and Filter.pptx`

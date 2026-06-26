@@ -1,3 +1,10 @@
+---
+layout: default
+title: "EP4: Phần tử Biến đổi"
+nav_order: 4
+parent: Bài giảng
+---
+
 # EP4 Variable conversion elements
 
 > Tài liệu chuyển đổi từ PDF: `EP4 Variable conversion elements.pdf`

@@ -1,3 +1,10 @@
+---
+layout: default
+title: "EP3: Sai số Đo lường"
+nav_order: 3
+parent: Bài giảng
+---
+
 # EP3 Errors during the measurement process
 
 > Tài liệu chuyển đổi từ PDF: `EP3 Errors during the measurement process.pdf`

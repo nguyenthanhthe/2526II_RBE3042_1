@@ -1,3 +1,10 @@
+---
+layout: default
+title: "EP10: Cảm biến Áp suất"
+nav_order: 1
+parent: Bài giảng
+---
+
 # EP10 Pressure
 
 > Tài liệu chuyển đổi từ PDF: `EP10 Pressure.pdf`

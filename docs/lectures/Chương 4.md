@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Chương 4: Phân loại Cảm biến"
+nav_order: 7
+parent: Bài giảng
+---
+
 # Chương 4
 
 > Tài liệu chuyển đổi từ DOCX: `Chương 4.docx`

@@ -1,0 +1,44 @@
+title: "Cảm biến & Đo lường — BMP280"
+description: "Tài liệu môn học RBE3042 — Khảo sát cảm biến áp suất BMP280 trên ESP32-C3"
+baseurl: "/2526II_RBE3042_1"
+url: "https://nguyenthanhthe.github.io"
+
+# Theme: Minimal Mistakes (hỗ trợ tốt cho tài liệu kỹ thuật)
+remote_theme: just-the-docs/just-the-docs@v0.8.2
+
+# Encoding
+encoding: utf-8
+
+# Navigation
+nav_enabled: true
+search_enabled: true
+search_tokenizer_separator: /[\s\-/]+/
+
+# Footer
+footer_content: "© 2025 Nhóm RBE3042-K69E-RE1 — VNU-UET"
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude build artifacts
+exclude:
+  - "*.py"
+  - "*.ini"
+  - ".agents/"
+  - "code/"
+  - "data/"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "PROJECT.md"
+
+# Collections for docs
+collections:
+  lectures:
+    output: true
+    permalink: /lectures/:name/
+  exam:
+    output: true
+    permalink: /exam/:name/

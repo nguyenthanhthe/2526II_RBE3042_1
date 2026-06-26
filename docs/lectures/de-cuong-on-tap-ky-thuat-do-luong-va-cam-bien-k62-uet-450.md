@@ -1,3 +1,10 @@
+---
+layout: default
+title: "de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450"
+nav_order: 99
+parent: "Bai giang"
+---
+
 # de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450
 
 > Tài liệu chuyển đổi từ PDF: `de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450.pdf`
