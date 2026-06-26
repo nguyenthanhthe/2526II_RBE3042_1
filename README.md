@@ -53,8 +53,8 @@ Workspace được tổ chức khoa học theo cấu trúc sau:
 │   │   └── ... (10 tệp bài giảng chương/tuần)
 │   └── references/            # Giáo trình & Datasheets (Mục lục & Tóm tắt)
 │       ├── Handbook of modern sensors...md
-│       ├── lsm6dsv16x.md
-│       └── ...
+│       ├── BST-BMP280-DS001-11.pdf (Datasheet gốc)
+│       └── Lock-in ...Measurement and Instrumentation Principles...md
 ├── figures/                   # Hình ảnh & Đồ thị báo cáo
 │   ├── exam/                  # Sơ đồ minh họa cho ngân hàng câu hỏi
 │   ├── lectures/              # Hình ảnh trích xuất từ slide bài giảng
