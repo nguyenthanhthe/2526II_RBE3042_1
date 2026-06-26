@@ -4,29 +4,22 @@
 
 ---
 
-
 ## Trang 1
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Errors during the measurement
 - process
 - 1
 
-
-
-![Hình ảnh trang 1](../../figures/lectures/EP3 Errors during the measurement process_page_1_img_1.jpeg)
-
+![Trang 1](../../figures/lectures/EP3 Errors during the measurement process_page_1.png)
 
 ---
 
-
 ## Trang 2
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Sources of systematic error
@@ -39,24 +32,17 @@
 - The process of measurement always disturbs the system
 - being measured.
 
+![Trang 2](../../figures/lectures/EP3 Errors during the measurement process_page_2.png)
 
+![Hình ảnh trang 2](../../figures/lectures/EP3 Errors during the measurement process_page_2_img_1.jpeg)
 
-![Hình ảnh trang 2](../../figures/lectures/EP3 Errors during the measurement process_page_2_img_2.jpeg)
-
-
-![Hình ảnh trang 2](../../figures/lectures/EP3 Errors during the measurement process_page_2_img_3.jpeg)
-
-
-![Hình ảnh trang 2](../../figures/lectures/EP3 Errors during the measurement process_page_2_img_4.png)
-
+![Hình ảnh trang 2](../../figures/lectures/EP3 Errors during the measurement process_page_2_img_2.png)
 
 ---
 
-
 ## Trang 3
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Sources of systematic error
@@ -83,21 +69,15 @@
 - 𝑅4 + 𝑅𝐶𝐷𝑅5
 - 𝑅4 + 𝑅𝐶𝐷+ 𝑅5
 
+![Trang 3](../../figures/lectures/EP3 Errors during the measurement process_page_3.png)
 
-
-![Hình ảnh trang 3](../../figures/lectures/EP3 Errors during the measurement process_page_3_img_5.jpeg)
-
-
-![Hình ảnh trang 3](../../figures/lectures/EP3 Errors during the measurement process_page_3_img_6.png)
-
+![Hình ảnh trang 3](../../figures/lectures/EP3 Errors during the measurement process_page_3_img_1.png)
 
 ---
 
-
 ## Trang 4
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Sources of systematic error
@@ -118,21 +98,15 @@
 - be as high as possible to minimize disturbance of the measured
 - system.
 
+![Trang 4](../../figures/lectures/EP3 Errors during the measurement process_page_4.png)
 
-
-![Hình ảnh trang 4](../../figures/lectures/EP3 Errors during the measurement process_page_4_img_7.jpeg)
-
-
-![Hình ảnh trang 4](../../figures/lectures/EP3 Errors during the measurement process_page_4_img_8.png)
-
+![Hình ảnh trang 4](../../figures/lectures/EP3 Errors during the measurement process_page_4_img_1.png)
 
 ---
 
-
 ## Trang 5
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Sources of systematic error
@@ -146,21 +120,15 @@
 - What is the measurement error caused by the resistance of the
 - measuring instrument?
 
+![Trang 5](../../figures/lectures/EP3 Errors during the measurement process_page_5.png)
 
-
-![Hình ảnh trang 5](../../figures/lectures/EP3 Errors during the measurement process_page_5_img_9.jpeg)
-
-
-![Hình ảnh trang 5](../../figures/lectures/EP3 Errors during the measurement process_page_5_img_10.png)
-
+![Hình ảnh trang 5](../../figures/lectures/EP3 Errors during the measurement process_page_5_img_1.png)
 
 ---
 
-
 ## Trang 6
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Sources of systematic error
@@ -174,24 +142,17 @@
 - systems).
 - 6
 
+![Trang 6](../../figures/lectures/EP3 Errors during the measurement process_page_6.png)
 
+![Hình ảnh trang 6](../../figures/lectures/EP3 Errors during the measurement process_page_6_img_1.png)
 
-![Hình ảnh trang 6](../../figures/lectures/EP3 Errors during the measurement process_page_6_img_11.jpeg)
-
-
-![Hình ảnh trang 6](../../figures/lectures/EP3 Errors during the measurement process_page_6_img_12.png)
-
-
-![Hình ảnh trang 6](../../figures/lectures/EP3 Errors during the measurement process_page_6_img_13.png)
-
+![Hình ảnh trang 6](../../figures/lectures/EP3 Errors during the measurement process_page_6_img_2.png)
 
 ---
 
-
 ## Trang 7
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Reduction of systematic errors
@@ -210,21 +171,15 @@
 - of the resistance with
 - temperature is very small).
 
+![Trang 7](../../figures/lectures/EP3 Errors during the measurement process_page_7.png)
 
-
-![Hình ảnh trang 7](../../figures/lectures/EP3 Errors during the measurement process_page_7_img_14.jpeg)
-
-
-![Hình ảnh trang 7](../../figures/lectures/EP3 Errors during the measurement process_page_7_img_15.png)
-
+![Hình ảnh trang 7](../../figures/lectures/EP3 Errors during the measurement process_page_7_img_1.png)
 
 ---
 
-
 ## Trang 8
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Reduction of systematic errors
@@ -243,66 +198,47 @@
 - The total resistance remains
 - approximately the same
 
+![Trang 8](../../figures/lectures/EP3 Errors during the measurement process_page_8.png)
 
-
-![Hình ảnh trang 8](../../figures/lectures/EP3 Errors during the measurement process_page_8_img_16.jpeg)
-
-
-![Hình ảnh trang 8](../../figures/lectures/EP3 Errors during the measurement process_page_8_img_17.png)
-
+![Hình ảnh trang 8](../../figures/lectures/EP3 Errors during the measurement process_page_8_img_1.png)
 
 ---
 
-
 ## Trang 9
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Reduction of systematic errors
 - 9
 - Example of 3-wire bridge circuit
 
+![Trang 9](../../figures/lectures/EP3 Errors during the measurement process_page_9.png)
 
+![Hình ảnh trang 9](../../figures/lectures/EP3 Errors during the measurement process_page_9_img_1.png)
 
-![Hình ảnh trang 9](../../figures/lectures/EP3 Errors during the measurement process_page_9_img_18.jpeg)
-
-
-![Hình ảnh trang 9](../../figures/lectures/EP3 Errors during the measurement process_page_9_img_19.png)
-
-
-![Hình ảnh trang 9](../../figures/lectures/EP3 Errors during the measurement process_page_9_img_20.png)
-
+![Hình ảnh trang 9](../../figures/lectures/EP3 Errors during the measurement process_page_9_img_2.png)
 
 ---
 
-
 ## Trang 10
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Reduction of systematic errors
 - High-gain feedback
 - 10
 
+![Trang 10](../../figures/lectures/EP3 Errors during the measurement process_page_10.png)
 
-
-![Hình ảnh trang 10](../../figures/lectures/EP3 Errors during the measurement process_page_10_img_21.jpeg)
-
-
-![Hình ảnh trang 10](../../figures/lectures/EP3 Errors during the measurement process_page_10_img_22.png)
-
+![Hình ảnh trang 10](../../figures/lectures/EP3 Errors during the measurement process_page_10_img_1.png)
 
 ---
 
-
 ## Trang 11
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Reduction of systematic errors
@@ -318,21 +254,15 @@
 - Because 𝐾𝑎is very large, 𝐾𝑓𝐾𝑎𝐾𝑚𝐾𝑠≫1
 - 𝑋0 = 𝐸𝑖/𝐾𝑓
 
+![Trang 11](../../figures/lectures/EP3 Errors during the measurement process_page_11.png)
 
-
-![Hình ảnh trang 11](../../figures/lectures/EP3 Errors during the measurement process_page_11_img_23.jpeg)
-
-
-![Hình ảnh trang 11](../../figures/lectures/EP3 Errors during the measurement process_page_11_img_24.png)
-
+![Hình ảnh trang 11](../../figures/lectures/EP3 Errors during the measurement process_page_11_img_1.png)
 
 ---
 
-
 ## Trang 12
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Random Error
@@ -355,18 +285,13 @@
 - 𝑛−1
 - 12
 
-
-
-![Hình ảnh trang 12](../../figures/lectures/EP3 Errors during the measurement process_page_12_img_25.jpeg)
-
+![Trang 12](../../figures/lectures/EP3 Errors during the measurement process_page_12.png)
 
 ---
 
-
 ## Trang 13
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Aggregation of measurement system errors
@@ -380,18 +305,13 @@
 - 𝑥2 + 𝑦2
 - 13
 
-
-
-![Hình ảnh trang 13](../../figures/lectures/EP3 Errors during the measurement process_page_13_img_26.jpeg)
-
+![Trang 13](../../figures/lectures/EP3 Errors during the measurement process_page_13.png)
 
 ---
 
-
 ## Trang 14
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Aggregation of measurement system errors
@@ -411,18 +331,13 @@
 - 1 ± 𝑓where f = e/(y + z)
 - 14
 
-
-
-![Hình ảnh trang 14](../../figures/lectures/EP3 Errors during the measurement process_page_14_img_27.jpeg)
-
+![Trang 14](../../figures/lectures/EP3 Errors during the measurement process_page_14.png)
 
 ---
 
-
 ## Trang 15
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Aggregation of measurement system errors
@@ -441,18 +356,13 @@
 - The total resistance S can be expressed as
 - 𝑆= 550Ω ± 7.93Ω or 𝑆= 550 1 ± 0.0144 Ω i.e. 𝑆= 550Ω ± 1.4%
 
-
-
-![Hình ảnh trang 15](../../figures/lectures/EP3 Errors during the measurement process_page_15_img_28.jpeg)
-
+![Trang 15](../../figures/lectures/EP3 Errors during the measurement process_page_15.png)
 
 ---
 
-
 ## Trang 16
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Aggregation of measurement system errors
@@ -465,18 +375,13 @@
 - 𝑎𝑦2 + 𝑏𝑧2, and 𝑓= 𝑒/(𝑦−𝑧)
 - 16
 
-
-
-![Hình ảnh trang 16](../../figures/lectures/EP3 Errors during the measurement process_page_16_img_29.jpeg)
-
+![Trang 16](../../figures/lectures/EP3 Errors during the measurement process_page_16.png)
 
 ---
 
-
 ## Trang 17
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Aggregation of measurement system errors
@@ -492,18 +397,13 @@
 - 0.001 × 10 2 + 0.001 × 9.5 2 = 0.0138
 - 𝑓= 0.0138/0.5
 
-
-
-![Hình ảnh trang 17](../../figures/lectures/EP3 Errors during the measurement process_page_17_img_30.jpeg)
-
+![Trang 17](../../figures/lectures/EP3 Errors during the measurement process_page_17.png)
 
 ---
 
-
 ## Trang 18
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Aggregation of measurement system errors
@@ -522,18 +422,13 @@
 - 𝑎2 + 𝑏2
 - 18
 
-
-
-![Hình ảnh trang 18](../../figures/lectures/EP3 Errors during the measurement process_page_18_img_31.jpeg)
-
+![Trang 18](../../figures/lectures/EP3 Errors during the measurement process_page_18.png)
 
 ---
 
-
 ## Trang 19
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Aggregation of measurement system errors
@@ -546,18 +441,13 @@
 - 19
 - 𝑒= ± 0.012 + 0.022 = ±0.022 𝑜𝑟± 2.2%
 
-
-
-![Hình ảnh trang 19](../../figures/lectures/EP3 Errors during the measurement process_page_19_img_32.jpeg)
-
+![Trang 19](../../figures/lectures/EP3 Errors during the measurement process_page_19.png)
 
 ---
 
-
 ## Trang 20
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Aggregation of measurement system errors
@@ -589,18 +479,13 @@
 - 𝑧(𝑎+ 𝑏)
 - 20
 
-
-
-![Hình ảnh trang 20](../../figures/lectures/EP3 Errors during the measurement process_page_20_img_33.jpeg)
-
+![Trang 20](../../figures/lectures/EP3 Errors during the measurement process_page_20.png)
 
 ---
 
-
 ## Trang 21
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Aggregation of measurement system errors
@@ -613,18 +498,13 @@
 - 21
 - 𝑒= ± 0.022 + 0.0032 = ±0.036 𝑜𝑟± 3.6%
 
-
-
-![Hình ảnh trang 21](../../figures/lectures/EP3 Errors during the measurement process_page_21_img_34.jpeg)
-
+![Trang 21](../../figures/lectures/EP3 Errors during the measurement process_page_21.png)
 
 ---
 
-
 ## Trang 22
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Total error when combining multiple measurements
@@ -648,9 +528,7 @@
 - 𝑚3
 - ± 3.5% (possible error = 3% + 0.5%=3.5%)
 
-
-
-![Hình ảnh trang 22](../../figures/lectures/EP3 Errors during the measurement process_page_22_img_35.jpeg)
-
+![Trang 22](../../figures/lectures/EP3 Errors during the measurement process_page_22.png)
 
 ---
+

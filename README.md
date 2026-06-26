@@ -37,6 +37,7 @@ Workspace được tổ chức khoa học theo cấu trúc sau:
 │   │   └── EMA_Filter.ino
 │   ├── Kalman_Filter/         # Bộ lọc Kalman 1 chiều (1D Kalman Filter)
 │   │   └── Kalman_Filter.ino
+│   ├── digitize_lectures.py   # Script số hóa slide bài giảng
 │   └── platformio.ini         # Cấu hình PlatformIO
 ├── data/                      # Dữ liệu thực nghiệm CSV
 │   ├── dynamic/               # Dữ liệu động
@@ -59,19 +60,23 @@ Workspace được tổ chức khoa học theo cấu trúc sau:
 │   ├── exam/                  # Sơ đồ minh họa cho ngân hàng câu hỏi
 │   ├── lectures/              # Hình ảnh trích xuất từ slide bài giảng
 │   └── ...
-└── reports/                   # Các báo cáo tuần (Markdown)
-    ├── report_1.md            # Báo cáo tuần 1: Lọc Kalman 1D trên ESP32-C3
-    ├── report_2.md            # Báo cáo tuần 2: Đặc tính tĩnh, Oversampling & IIR
-    ├── report_3.md            # Báo cáo tuần 3: Bộ lọc EMA
-    ├── report_4.md            # Báo cáo tuần 4: Khảo sát ảnh hưởng nhiệt độ
-    └── report_5.md            # Báo cáo tuần 5: So sánh Kalman & EMA
+├── reports/                   # Các báo cáo tuần (Markdown)
+│   ├── report_1.md            # Báo cáo tuần 1: Lọc Kalman 1D trên ESP32-C3
+│   ├── report_2.md            # Báo cáo tuần 2: Đặc tính tĩnh, Oversampling & IIR
+│   ├── report_3.md            # Báo cáo tuần 3: Bộ lọc EMA
+│   ├── report_4.md            # Báo cáo tuần 4: Khảo sát ảnh hưởng nhiệt độ
+│   └── report_5.md            # Báo cáo tuần 5: So sánh Kalman & EMA
+├── slides/                    # Slide báo cáo thuyết trình
+│   └── presentation.html      # Trang slide báo cáo HTML
+├── PROJECT.md                 # Kế hoạch và thông tin dự án
+└── README.md                  # Hướng dẫn và giới thiệu tổng quan
 ```
 
 ---
 
 ## 📚 Ngân hàng Câu hỏi Ôn thi Vấn đáp Cuối kỳ
 Tập tài liệu ngân hàng câu hỏi chi tiết phục vụ thi vấn đáp cuối kỳ môn học:
-* [Ngân hàng Câu hỏi Ôn tập Vấn đáp BMP280](./docs/exam/ngan_hang_cau_hoi_bmp280.md) — Bao gồm **20 câu hỏi tự luận/vấn đáp** từ nguyên lý màng bán dẫn MEMS, mạch cầu đo Wheatstone, mạch khuếch đại vi sai AD620, cấu hình lấy mẫu Nyquist-Shannon cho tới thiết kế & cài đặt code C bộ lọc số (FIR, IIR Butterworth, EMA, Kalman 1D).
+* [Ngân hàng Câu hỏi Ôn tập Vấn đáp BMP280](./docs/exam/ngan_hang_cau_hoi_bmp280.md) — Bao gồm **25 câu hỏi tự luận/vấn đáp** từ nguyên lý màng bán dẫn MEMS, mạch cầu đo Wheatstone, mạch khuếch đại vi sai AD620, cấu hình lấy mẫu Nyquist-Shannon cho tới thiết kế & cài đặt code C bộ lọc số (FIR, IIR Butterworth, EMA, Kalman 1D).
 
 ---
 
@@ -79,7 +84,7 @@ Tập tài liệu ngân hàng câu hỏi chi tiết phục vụ thi vấn đáp 
 Toàn bộ slide bài giảng liên quan trực tiếp đến cảm biến áp suất, mạch cầu đo, mạch xử lý tín hiệu và các bộ lọc số đã được trích xuất nội dung văn bản và hình ảnh tương ứng sang định dạng Markdown:
 * **Áp suất & Cảm biến áp suất:** [EP10 Pressure](./docs/lectures/EP10%20Pressure.md)
 * **Lấy mẫu & Bộ lọc số:** [Chappter 5.2 ADC-Sampling and Filter](./docs/lectures/Chappter%205.2%20ADC-Sampling%20and%20Filter.md)
-* **Mạch đo cảm biến:** [EP5 Circuits for Sensors](./docs/lectures/EP5%20Circuits%20for%20Sensors.md) & [EP5b Interface Electronic Circuits](./docs/lectures/EP5b%20Interface%20Electronic%20Circuits.md)
+* **Mạch đo cảm biến & Phần tử chuyển đổi:** [EP5 Circuits for Sensors](./docs/lectures/EP5%20Circuits%20for%20Sensors.md), [EP5b Interface Electronic Circuits](./docs/lectures/EP5b%20Interface%20Electronic%20Circuits.md) & [EP4 Variable conversion elements](./docs/lectures/EP4%20Variable%20conversion%20elements.md)
 * **Mạch tiền xử lý tín hiệu:** [Chương 4: Mạch đo lường và xử lý tín hiệu lối ra cảm biến](./docs/lectures/Chương%204.md) & Khuếch đại đo lường [AD620](./docs/lectures/AD620.md)
 * **Lý thuyết đo lường & Sai số:** [EP3 Errors during the measurement process](./docs/lectures/EP3%20Errors%20during%20the%20measurement%20process.md) & [EP2 Measurement Systems](./docs/lectures/EP2%20Measurement%20Systems.md)
 * **Đề cương ôn tập khoa học:** [Đề cương ôn tập kỹ thuật đo lường và cảm biến](./docs/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450.md)

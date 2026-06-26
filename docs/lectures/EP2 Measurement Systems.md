@@ -4,28 +4,21 @@
 
 ---
 
-
 ## Trang 1
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Introduction to Measurements
 - 1
 
-
-
-![Hình ảnh trang 1](../../figures/lectures/EP2 Measurement Systems_page_1_img_1.jpeg)
-
+![Trang 1](../../figures/lectures/EP2 Measurement Systems_page_1.png)
 
 ---
 
-
 ## Trang 2
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Introduction to Measurement
@@ -35,21 +28,15 @@
 - Sensors use mostly electrical output signals.
 - 2
 
+![Trang 2](../../figures/lectures/EP2 Measurement Systems_page_2.png)
 
-
-![Hình ảnh trang 2](../../figures/lectures/EP2 Measurement Systems_page_2_img_2.jpeg)
-
-
-![Hình ảnh trang 2](../../figures/lectures/EP2 Measurement Systems_page_2_img_3.jpeg)
-
+![Hình ảnh trang 2](../../figures/lectures/EP2 Measurement Systems_page_2_img_1.jpeg)
 
 ---
 
-
 ## Trang 3
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Elements of a measurement system
@@ -59,21 +46,15 @@
 - chain:
 - 3
 
+![Trang 3](../../figures/lectures/EP2 Measurement Systems_page_3.png)
 
-
-![Hình ảnh trang 3](../../figures/lectures/EP2 Measurement Systems_page_3_img_4.jpeg)
-
-
-![Hình ảnh trang 3](../../figures/lectures/EP2 Measurement Systems_page_3_img_5.png)
-
+![Hình ảnh trang 3](../../figures/lectures/EP2 Measurement Systems_page_3_img_1.png)
 
 ---
 
-
 ## Trang 4
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Elements of a measurement system
@@ -83,36 +64,25 @@
 - input applied to it).
 - 4
 
+![Trang 4](../../figures/lectures/EP2 Measurement Systems_page_4.png)
 
+![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_1.png)
 
-![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_6.jpeg)
+![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_2.png)
 
+![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_3.jpeg)
 
-![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_7.png)
+![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_4.png)
 
+![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_5.png)
 
-![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_8.png)
-
-
-![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_9.jpeg)
-
-
-![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_10.png)
-
-
-![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_11.png)
-
-
-![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_12.png)
-
+![Hình ảnh trang 4](../../figures/lectures/EP2 Measurement Systems_page_4_img_6.png)
 
 ---
 
-
 ## Trang 5
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Elements of a measurement system
@@ -127,27 +97,19 @@
 - known as a transducer.
 - 5
 
+![Trang 5](../../figures/lectures/EP2 Measurement Systems_page_5.png)
 
+![Hình ảnh trang 5](../../figures/lectures/EP2 Measurement Systems_page_5_img_1.png)
 
-![Hình ảnh trang 5](../../figures/lectures/EP2 Measurement Systems_page_5_img_13.jpeg)
+![Hình ảnh trang 5](../../figures/lectures/EP2 Measurement Systems_page_5_img_2.jpeg)
 
-
-![Hình ảnh trang 5](../../figures/lectures/EP2 Measurement Systems_page_5_img_14.png)
-
-
-![Hình ảnh trang 5](../../figures/lectures/EP2 Measurement Systems_page_5_img_15.jpeg)
-
-
-![Hình ảnh trang 5](../../figures/lectures/EP2 Measurement Systems_page_5_img_16.png)
-
+![Hình ảnh trang 5](../../figures/lectures/EP2 Measurement Systems_page_5_img_3.png)
 
 ---
 
-
 ## Trang 6
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Elements of a measurement system
@@ -168,24 +130,17 @@
 - In some cases, the word ‘sensor’ is used generically
 - to refer to both transducers and transmitters
 
+![Trang 6](../../figures/lectures/EP2 Measurement Systems_page_6.png)
 
+![Hình ảnh trang 6](../../figures/lectures/EP2 Measurement Systems_page_6_img_1.png)
 
-![Hình ảnh trang 6](../../figures/lectures/EP2 Measurement Systems_page_6_img_17.jpeg)
-
-
-![Hình ảnh trang 6](../../figures/lectures/EP2 Measurement Systems_page_6_img_18.png)
-
-
-![Hình ảnh trang 6](../../figures/lectures/EP2 Measurement Systems_page_6_img_19.png)
-
+![Hình ảnh trang 6](../../figures/lectures/EP2 Measurement Systems_page_6_img_2.png)
 
 ---
 
-
 ## Trang 7
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Elements of a measurement system
@@ -197,30 +152,21 @@
 - The signal transmission
 - element
 
+![Trang 7](../../figures/lectures/EP2 Measurement Systems_page_7.png)
 
+![Hình ảnh trang 7](../../figures/lectures/EP2 Measurement Systems_page_7_img_1.png)
 
-![Hình ảnh trang 7](../../figures/lectures/EP2 Measurement Systems_page_7_img_20.jpeg)
+![Hình ảnh trang 7](../../figures/lectures/EP2 Measurement Systems_page_7_img_2.jpeg)
 
+![Hình ảnh trang 7](../../figures/lectures/EP2 Measurement Systems_page_7_img_3.png)
 
-![Hình ảnh trang 7](../../figures/lectures/EP2 Measurement Systems_page_7_img_21.png)
-
-
-![Hình ảnh trang 7](../../figures/lectures/EP2 Measurement Systems_page_7_img_22.jpeg)
-
-
-![Hình ảnh trang 7](../../figures/lectures/EP2 Measurement Systems_page_7_img_23.png)
-
-
-![Hình ảnh trang 7](../../figures/lectures/EP2 Measurement Systems_page_7_img_24.jpeg)
-
+![Hình ảnh trang 7](../../figures/lectures/EP2 Measurement Systems_page_7_img_4.jpeg)
 
 ---
 
-
 ## Trang 8
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Elements of a measurement system
@@ -234,21 +180,15 @@
 - microprocessor and some communication interface.
 - 8
 
+![Trang 8](../../figures/lectures/EP2 Measurement Systems_page_8.png)
 
-
-![Hình ảnh trang 8](../../figures/lectures/EP2 Measurement Systems_page_8_img_25.jpeg)
-
-
-![Hình ảnh trang 8](../../figures/lectures/EP2 Measurement Systems_page_8_img_26.png)
-
+![Hình ảnh trang 8](../../figures/lectures/EP2 Measurement Systems_page_8_img_1.png)
 
 ---
 
-
 ## Trang 9
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Static Properties
@@ -262,21 +202,15 @@
 - BOTH input signal AND output
 - signal are constant.
 
+![Trang 9](../../figures/lectures/EP2 Measurement Systems_page_9.png)
 
-
-![Hình ảnh trang 9](../../figures/lectures/EP2 Measurement Systems_page_9_img_27.jpeg)
-
-
-![Hình ảnh trang 9](../../figures/lectures/EP2 Measurement Systems_page_9_img_28.png)
-
+![Hình ảnh trang 9](../../figures/lectures/EP2 Measurement Systems_page_9_img_1.png)
 
 ---
 
-
 ## Trang 10
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Accuracy and inaccuracy
@@ -294,18 +228,13 @@
 - × 100%
 - 10
 
-
-
-![Hình ảnh trang 10](../../figures/lectures/EP2 Measurement Systems_page_10_img_29.jpeg)
-
+![Trang 10](../../figures/lectures/EP2 Measurement Systems_page_10.png)
 
 ---
 
-
 ## Trang 11
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Precision/repeatability/reproducibility
@@ -318,58 +247,41 @@
 - caused by a bias in the measurements.
 - 11
 
-
-
-![Hình ảnh trang 11](../../figures/lectures/EP2 Measurement Systems_page_11_img_30.jpeg)
-
+![Trang 11](../../figures/lectures/EP2 Measurement Systems_page_11.png)
 
 ---
 
-
 ## Trang 12
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Precision/repeatability/reproducibility
 - 12
 
+![Trang 12](../../figures/lectures/EP2 Measurement Systems_page_12.png)
 
-
-![Hình ảnh trang 12](../../figures/lectures/EP2 Measurement Systems_page_12_img_31.jpeg)
-
-
-![Hình ảnh trang 12](../../figures/lectures/EP2 Measurement Systems_page_12_img_32.png)
-
+![Hình ảnh trang 12](../../figures/lectures/EP2 Measurement Systems_page_12_img_1.png)
 
 ---
 
-
 ## Trang 13
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Precision/repeatability/reproducibility
 - 13
 
+![Trang 13](../../figures/lectures/EP2 Measurement Systems_page_13.png)
 
-
-![Hình ảnh trang 13](../../figures/lectures/EP2 Measurement Systems_page_13_img_33.jpeg)
-
-
-![Hình ảnh trang 13](../../figures/lectures/EP2 Measurement Systems_page_13_img_34.png)
-
+![Hình ảnh trang 13](../../figures/lectures/EP2 Measurement Systems_page_13_img_1.png)
 
 ---
 
-
 ## Trang 14
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Precision/repeatability/reproducibility
@@ -388,18 +300,13 @@
 - measurement.
 - 14
 
-
-
-![Hình ảnh trang 14](../../figures/lectures/EP2 Measurement Systems_page_14_img_35.jpeg)
-
+![Trang 14](../../figures/lectures/EP2 Measurement Systems_page_14.png)
 
 ---
 
-
 ## Trang 15
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Precision/repeatability/reproducibility
@@ -410,38 +317,27 @@
 - anywhere between 950 Ω and 1050 Ω.
 - 15
 
-
-
-![Hình ảnh trang 15](../../figures/lectures/EP2 Measurement Systems_page_15_img_36.jpeg)
-
+![Trang 15](../../figures/lectures/EP2 Measurement Systems_page_15.png)
 
 ---
 
-
 ## Trang 16
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Linearlity
 - 16
 
+![Trang 16](../../figures/lectures/EP2 Measurement Systems_page_16.png)
 
-
-![Hình ảnh trang 16](../../figures/lectures/EP2 Measurement Systems_page_16_img_37.jpeg)
-
-
-![Hình ảnh trang 16](../../figures/lectures/EP2 Measurement Systems_page_16_img_38.png)
-
+![Hình ảnh trang 16](../../figures/lectures/EP2 Measurement Systems_page_16_img_1.png)
 
 ---
 
-
 ## Trang 17
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Sensitivity of measurement
@@ -460,21 +356,15 @@
 - the instrument is 5
 - degrees/bar
 
+![Trang 17](../../figures/lectures/EP2 Measurement Systems_page_17.png)
 
-
-![Hình ảnh trang 17](../../figures/lectures/EP2 Measurement Systems_page_17_img_39.jpeg)
-
-
-![Hình ảnh trang 17](../../figures/lectures/EP2 Measurement Systems_page_17_img_40.png)
-
+![Hình ảnh trang 17](../../figures/lectures/EP2 Measurement Systems_page_17_img_1.png)
 
 ---
 
-
 ## Trang 18
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Sensitivity of measurement
@@ -494,18 +384,13 @@
 - 328
 - 290
 
-
-
-![Hình ảnh trang 18](../../figures/lectures/EP2 Measurement Systems_page_18_img_41.jpeg)
-
+![Trang 18](../../figures/lectures/EP2 Measurement Systems_page_18.png)
 
 ---
 
-
 ## Trang 19
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Threshold and Resolution
@@ -517,18 +402,13 @@
 - an observable change in the instrument output.
 - 19
 
-
-
-![Hình ảnh trang 19](../../figures/lectures/EP2 Measurement Systems_page_19_img_42.jpeg)
-
+![Trang 19](../../figures/lectures/EP2 Measurement Systems_page_19.png)
 
 ---
 
-
 ## Trang 20
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Dynamic Properties
@@ -540,24 +420,17 @@
 - however, will not be a step but
 - a transient function.
 
+![Trang 20](../../figures/lectures/EP2 Measurement Systems_page_20.png)
 
+![Hình ảnh trang 20](../../figures/lectures/EP2 Measurement Systems_page_20_img_1.png)
 
-![Hình ảnh trang 20](../../figures/lectures/EP2 Measurement Systems_page_20_img_43.jpeg)
-
-
-![Hình ảnh trang 20](../../figures/lectures/EP2 Measurement Systems_page_20_img_44.png)
-
-
-![Hình ảnh trang 20](../../figures/lectures/EP2 Measurement Systems_page_20_img_45.png)
-
+![Hình ảnh trang 20](../../figures/lectures/EP2 Measurement Systems_page_20_img_2.png)
 
 ---
 
-
 ## Trang 21
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Dynamic Properties
@@ -577,18 +450,13 @@
 - reading and 𝑎0 … 𝑎𝑛, 𝑏0 are constants.
 - 21
 
-
-
-![Hình ảnh trang 21](../../figures/lectures/EP2 Measurement Systems_page_21_img_46.jpeg)
-
+![Trang 21](../../figures/lectures/EP2 Measurement Systems_page_21.png)
 
 ---
 
-
 ## Trang 22
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Dynamic Properties
@@ -601,24 +469,17 @@
 - Where K is the instrument sensitivity.
 - 22
 
+![Trang 22](../../figures/lectures/EP2 Measurement Systems_page_22.png)
 
+![Hình ảnh trang 22](../../figures/lectures/EP2 Measurement Systems_page_22_img_1.png)
 
-![Hình ảnh trang 22](../../figures/lectures/EP2 Measurement Systems_page_22_img_47.jpeg)
-
-
-![Hình ảnh trang 22](../../figures/lectures/EP2 Measurement Systems_page_22_img_48.png)
-
-
-![Hình ảnh trang 22](../../figures/lectures/EP2 Measurement Systems_page_22_img_49.jpeg)
-
+![Hình ảnh trang 22](../../figures/lectures/EP2 Measurement Systems_page_22_img_2.jpeg)
 
 ---
 
-
 ## Trang 23
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Dynamic Properties
@@ -643,18 +504,13 @@
 - fast the system can respond to changes
 - 23
 
-
-
-![Hình ảnh trang 23](../../figures/lectures/EP2 Measurement Systems_page_23_img_50.jpeg)
-
+![Trang 23](../../figures/lectures/EP2 Measurement Systems_page_23.png)
 
 ---
 
-
 ## Trang 24
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Dynamic Properties
@@ -668,21 +524,15 @@
 - accuracy.
 - 24
 
+![Trang 24](../../figures/lectures/EP2 Measurement Systems_page_24.png)
 
-
-![Hình ảnh trang 24](../../figures/lectures/EP2 Measurement Systems_page_24_img_51.jpeg)
-
-
-![Hình ảnh trang 24](../../figures/lectures/EP2 Measurement Systems_page_24_img_52.png)
-
+![Hình ảnh trang 24](../../figures/lectures/EP2 Measurement Systems_page_24_img_1.png)
 
 ---
 
-
 ## Trang 25
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Dynamic Properties
@@ -703,18 +553,13 @@
 - Ở 5000m, nhiệt độ khí cầu gửi về là bao nhiêu?
 - 25
 
-
-
-![Hình ảnh trang 25](../../figures/lectures/EP2 Measurement Systems_page_25_img_53.jpeg)
-
+![Trang 25](../../figures/lectures/EP2 Measurement Systems_page_25.png)
 
 ---
 
-
 ## Trang 26
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Dynamic Properties
@@ -753,18 +598,13 @@
 - 0.72
 - 26
 
-
-
-![Hình ảnh trang 26](../../figures/lectures/EP2 Measurement Systems_page_26_img_54.jpeg)
-
+![Trang 26](../../figures/lectures/EP2 Measurement Systems_page_26.png)
 
 ---
 
-
 ## Trang 27
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Dynamic Properties
@@ -788,18 +628,13 @@
 - 𝑞𝑜𝑡= 𝐶1 + 𝐶2𝑡𝑒𝜆1𝑡+ 𝑞𝑜∞
 - 27
 
-
-
-![Hình ảnh trang 27](../../figures/lectures/EP2 Measurement Systems_page_27_img_55.jpeg)
-
+![Trang 27](../../figures/lectures/EP2 Measurement Systems_page_27.png)
 
 ---
 
-
 ## Trang 28
 
-### Khoa Điện tử- Viễn thông
-
+- Khoa Điện tử- Viễn thông
 - Trường Đại học Công nghệ, ĐHQGHN
 - Cảm biến và đo lường cho robot
 - Dynamic Properties
@@ -811,12 +646,9 @@
 - 𝑞𝑜𝑡= 𝐴𝑐𝑜𝑠𝜔𝑡+ 𝐵𝑠𝑖𝑛𝜔𝑡𝑒𝛼𝑡+ 𝑞𝑜∞
 - 28
 
+![Trang 28](../../figures/lectures/EP2 Measurement Systems_page_28.png)
 
-
-![Hình ảnh trang 28](../../figures/lectures/EP2 Measurement Systems_page_28_img_56.jpeg)
-
-
-![Hình ảnh trang 28](../../figures/lectures/EP2 Measurement Systems_page_28_img_57.png)
-
+![Hình ảnh trang 28](../../figures/lectures/EP2 Measurement Systems_page_28_img_1.png)
 
 ---
+

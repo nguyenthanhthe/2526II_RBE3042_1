@@ -1,48 +1,44 @@
 # Chappter 5.2 ADC-Sampling and Filter
 
-> Tài liệu chuyển đổi từ slide PowerPoint: `Chappter 5.2 ADC-Sampling and Filter.pptx`
+> Tài liệu chuyển đổi từ PPTX: `Chappter 5.2 ADC-Sampling and Filter.pptx`
 
 ---
-
 
 ## Slide 1
 
-### ADC- Sampling and Filter
-
+- ADC- Sampling and Filter
 - 1
 
----
+![Slide 1](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_1.png)
 
+---
 
 ## Slide 2
 
-### ADC Sampling
-
+- ADC Sampling
 - 2
-- 
-![Hình ảnh slide 2](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_2_img_1.png)
-
 - Measurement systems block diagram
 
----
+![Slide 2](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_2.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_2_media_rId2.png)
+
+---
 
 ## Slide 3
 
-### ADC interface and sampling
-
-- 
-![Hình ảnh slide 3](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_3_img_2.png)
-
+- ADC interface and sampling
 - 3
+
+![Slide 3](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_3.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_3_media_rId2.png)
 
 ---
 
-
 ## Slide 4
 
-### Digital Filters for sensor
-
+- Digital Filters for sensor
 - 4
 - FIR (Finite Impulse Response) bộ lọc số có đáp ứng xung hữu hạn:
 - Fs = 1 / 2 (ms) = 500 Hz, Fc = 50 Hz (low-pass), cửa sổ lọc N=5
@@ -50,34 +46,52 @@
 - 𝑥(𝑡) : tín hiệu vào
 - ℎ(𝑡) : đáp ứng xung (impulse response)𝑦(𝑡) : tín hiệu ra
 
----
+![Slide 4](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_4.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_4_media_rId3.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_4_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_4_media_rId4.png)
+
+---
 
 ## Slide 5
 
-### 5
-
+- 5
 - sinc(x)=sin(πx)/πx​
 - h[n]=2⋅0.1⋅sinc(0.2(n−2))
 - Digital Filter for sensor
 - h[n]=hideal​[n]⋅w[n]
 
----
+![Slide 5](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_5.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_5_media_rId3.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_5_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_5_media_rId6.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_5_media_rId5.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_5_media_rId4.png)
+
+---
 
 ## Slide 6
 
-### Digital Filter for sensor
-
+- Digital Filter for sensor
 - 6
+
+![Slide 6](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_6.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_6_media_rId2.png)
 
 ---
 
-
 ## Slide 7
 
-### 7
-
+- 7
 - #define N 5
 - float h[N] = {
 - 0.0675,
@@ -116,22 +130,26 @@
 - Fs = 1 / 2 (ms) = 500 Hz, Fc = 50 Hz (low-pass), cửa sổ lọc N=5
 - Digital Filter for sensor
 
----
+![Slide 7](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_7.png)
 
+---
 
 ## Slide 8
 
-### IIR Low pass filter-Bộ lọc đáp ứng xung vô hạn
-
+- IIR Low pass filter-Bộ lọc đáp ứng xung vô hạn
 - 8
+
+![Slide 8](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_8.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_8_media_rId3.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_8_media_rId2.png)
 
 ---
 
-
 ## Slide 9
 
-### 9
-
+- 9
 - float alpha = 0.385;
 - float y_prev = 0;
 - float IIR_LPF(float x)
@@ -140,22 +158,18 @@
 - y_prev = y;
 - return y;
 - }
-- 
-![Hình ảnh slide 9](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_9_img_3.png)
-
 - IIR Low pass filter
 - IIR Low pass filter bậc I
 
----
+![Slide 9](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_9.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_9_media_rId2.png)
+
+---
 
 ## Slide 10
 
-### 10
-
-- 
-![Hình ảnh slide 10](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_10_img_4.png)
-
+- 10
 - float b0 = 0.0675;
 - float b1 = 0.1349;
 - float b2 = 0.0675;
@@ -177,388 +191,333 @@
 - Butterworth 2nd order
 - IIR Low pass filter
 
----
+![Slide 10](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_10.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_10_media_rId3.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_10_media_rId2.png)
+
+---
 
 ## Slide 11
 
-### Kalman filter for sensor
-
+- Kalman filter for sensor
 - 11
 - Group discussion
 
----
+![Slide 11](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_11.png)
 
+---
 
 ## Slide 12
 
-### Sensors for mobile robot
-
+- Sensors for mobile robot
 - 12
-- 
-![Hình ảnh slide 12](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_12_img_5.png)
 
+![Slide 12](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_12.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_12_media_rId2.png)
 
 ---
 
-
 ## Slide 13
 
-### Sensors for Robots- Mobile robot
-
+- Sensors for Robots- Mobile robot
 - 13
 - IMU sensor
-- 
-![Hình ảnh slide 13](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_img_6.png)
-
-- 
-![Hình ảnh slide 13](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_img_7.png)
-
-- 
-![Hình ảnh slide 13](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_img_8.png)
-
-- 
-![Hình ảnh slide 13](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_img_9.png)
-
 - Motor: Encoder – Hall sensors
 - Approximate sensor
 - GPS
 - Deep camera
 - Line sensor
-- 
-![Hình ảnh slide 13](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_img_10.jpg)
-
-- 
-![Hình ảnh slide 13](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_img_11.png)
-
-- 
-![Hình ảnh slide 13](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_img_12.jpg)
-
-- 
-![Hình ảnh slide 13](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_img_13.png)
-
-- 
-![Hình ảnh slide 13](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_img_14.jpg)
-
-- 
-![Hình ảnh slide 13](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_img_15.jpg)
-
-- 
-![Hình ảnh slide 13](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_img_16.png)
-
 - Lidar sensor
 
----
+![Slide 13](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_media_rId8.jpeg)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_media_rId3.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_media_rId7.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_media_rId12.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_media_rId6.jpeg)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_media_rId11.jpeg)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_media_rId5.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_media_rId10.jpeg)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_media_rId4.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_13_media_rId9.png)
+
+---
 
 ## Slide 14
 
-### ROS and Sensors
-
+- ROS and Sensors
 - 14
-- 
-![Hình ảnh slide 14](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_14_img_17.png)
 
-- 
-![Hình ảnh slide 14](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_14_img_18.png)
+![Slide 14](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_14.png)
 
-- 
-![Hình ảnh slide 14](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_14_img_19.png)
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_14_media_rId3.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_14_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_14_media_rId4.png)
 
 ---
-
 
 ## Slide 15
 
-### ROS - Sensors
-
+- ROS - Sensors
 - 15
-- 
-![Hình ảnh slide 15](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_15_img_20.png)
 
-- 
-![Hình ảnh slide 15](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_15_img_21.png)
+![Slide 15](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_15.png)
 
-- 
-![Hình ảnh slide 15](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_15_img_22.png)
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_15_media_rId3.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_15_media_rId2.png)
 
 ---
-
 
 ## Slide 16
 
-### Laser scanner- LIDAR
-
+- Laser scanner- LIDAR
 - 16
-- 
-![Hình ảnh slide 16](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_16_img_23.png)
 
-- 
-![Hình ảnh slide 16](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_16_img_24.png)
+![Slide 16](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_16.png)
 
-- 
-![Hình ảnh slide 16](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_16_img_25.png)
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_16_media_rId3.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_16_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_16_media_rId4.png)
 
 ---
-
 
 ## Slide 17
 
-### 17
-
-- 
-![Hình ảnh slide 17](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_17_img_26.jpg)
-
-- 
-![Hình ảnh slide 17](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_17_img_27.png)
-
+- 17
 - 2D Lidar
 - 3D Lidar
-- 
-![Hình ảnh slide 17](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_17_img_28.png)
-
-- 
-![Hình ảnh slide 17](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_17_img_29.jpg)
-
 - Laser scanner- LIDAR
 
----
+![Slide 17](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_17.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_17_media_rId3.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_17_media_rId2.jpeg)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_17_media_rId5.jpeg)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_17_media_rId4.png)
+
+---
 
 ## Slide 18
 
-### BLDC MOTOR
-
+- BLDC MOTOR
 - 18
-- 
-![Hình ảnh slide 18](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_18_img_30.png)
-
-- 
-![Hình ảnh slide 18](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_18_img_31.jpg)
-
 - ROBOT Dynamic control
-- 
-![Hình ảnh slide 18](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_18_img_32.png)
 
-- 
-![Hình ảnh slide 18](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_18_img_33.png)
+![Slide 18](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_18.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_18_media_rId3.jpeg)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_18_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_18_media_rId5.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_18_media_rId4.png)
 
 ---
-
 
 ## Slide 19
 
-### ROBOT-BLDC MOTOR
-
+- ROBOT-BLDC MOTOR
 - 19
-- 
-![Hình ảnh slide 19](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_19_img_34.png)
-
 - BLDC MOTOR
 
----
+![Slide 19](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_19.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_19_media_rId2.png)
+
+---
 
 ## Slide 20
 
-### 20
-
-- 
-![Hình ảnh slide 20](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_20_img_35.png)
-
+- 20
 - ROBOT-BLDC MOTOR
 - BLDC MOTOR
-- 
-![Hình ảnh slide 20](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_20_img_36.png)
 
-- 
-![Hình ảnh slide 20](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_20_img_37.png)
+![Slide 20](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_20.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_20_media_rId3.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_20_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_20_media_rId4.png)
 
 ---
-
 
 ## Slide 21
 
-### Magnetic (Hall) sensors
-
+- Magnetic (Hall) sensors
 - 21
-- 
-![Hình ảnh slide 21](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_21_img_38.gif)
 
-- 
-![Hình ảnh slide 21](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_21_img_39.jpg)
+![Slide 21](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_21.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_21_media_rId3.jpeg)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_21_media_rId2.gif)
 
 ---
-
 
 ## Slide 22
 
-### Magnetic (Hall) sensors
-
+- Magnetic (Hall) sensors
 - 22
-- 
-![Hình ảnh slide 22](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_22_img_40.png)
 
-- 
-![Hình ảnh slide 22](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_22_img_41.png)
+![Slide 22](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_22.png)
 
-- 
-![Hình ảnh slide 22](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_22_img_42.wmf)
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_22_media_rId3.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_22_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_22_media_rId4.emf)
 
 ---
-
 
 ## Slide 23
 
-### Incremental rotary encoders (IRC)
-
-- 
-![Hình ảnh slide 23](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_23_img_43.gif)
-
+- Incremental rotary encoders (IRC)
 - 23
 
----
+![Slide 23](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_23.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_23_media_rId2.gif)
+
+---
 
 ## Slide 24
 
-### Absolute rotary encoders
-
-- 
-![Hình ảnh slide 24](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_24_img_44.gif)
-
+- Absolute rotary encoders
 - 24
 
----
+![Slide 24](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_24.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_24_media_rId2.gif)
+
+---
 
 ## Slide 25
 
-### 25
-
-- 
-![Hình ảnh slide 25](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_25_img_45.png)
-
+- 25
 - Absolute rotary encoders
 
----
+![Slide 25](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_25.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_25_media_rId2.png)
+
+---
 
 ## Slide 26
 
-### ROBOT – IMU sensor
-
+- ROBOT – IMU sensor
 - 26
-- 
-![Hình ảnh slide 26](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_26_img_46.png)
 
-- 
-![Hình ảnh slide 26](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_26_img_47.jpg)
+![Slide 26](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_26.png)
 
-- 
-![Hình ảnh slide 26](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_26_img_48.png)
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_26_media_rId3.jpeg)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_26_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_26_media_rId4.png)
 
 ---
-
 
 ## Slide 27
 
-### 27
-
+- 27
 - ROBOT – IMU sensor
-- 
-![Hình ảnh slide 27](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_27_img_49.png)
 
-- 
-![Hình ảnh slide 27](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_27_img_50.png)
+![Slide 27](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_27.png)
 
-- 
-![Hình ảnh slide 27](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_27_img_51.png)
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_27_media_rId3.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_27_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_27_media_rId4.png)
 
 ---
-
 
 ## Slide 28
 
-### 28
-
+- 28
 - ROBOT – IMU sensor
-- 
-![Hình ảnh slide 28](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_28_img_52.png)
-
-- 
-![Hình ảnh slide 28](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_28_img_53.png)
-
 - Digital filter in IMU sensor
-- 
-![Hình ảnh slide 28](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_28_img_54.png)
 
+![Slide 28](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_28.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_28_media_rId3.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_28_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_28_media_rId4.png)
 
 ---
-
 
 ## Slide 29
 
-### Inductive proximity sensors
-
+- Inductive proximity sensors
 - 29
-- 
-![Hình ảnh slide 29](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_29_img_55.png)
-
 - Only work with conductive objects
-- 
-![Hình ảnh slide 29](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_29_img_56.png)
 
-- 
-![Hình ảnh slide 29](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_29_img_57.wmf)
+![Slide 29](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_29.png)
 
-- 
-![Hình ảnh slide 29](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_29_img_58.png)
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_29_media_rId3.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_29_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_29_media_rId5.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_29_media_rId4.emf)
 
 ---
-
 
 ## Slide 30
 
-### Capacitive proximity sensors
-
+- Capacitive proximity sensors
 - 30
-- 
-![Hình ảnh slide 30](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_30_img_59.png)
 
-- 
-![Hình ảnh slide 30](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_30_img_60.png)
+![Slide 30](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_30.png)
 
-- 
-![Hình ảnh slide 30](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_30_img_61.png)
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_30_media_rId3.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_30_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_30_media_rId4.png)
 
 ---
-
 
 ## Slide 31
 
-### Optic proximity sensors
-
+- Optic proximity sensors
 - 31
-- 
-![Hình ảnh slide 31](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_31_img_62.png)
 
-- 
-![Hình ảnh slide 31](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_31_img_63.png)
+![Slide 31](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_31.png)
 
-- 
-![Hình ảnh slide 31](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_31_img_64.wmf)
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_31_media_rId3.png)
 
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_31_media_rId2.png)
+
+![Embedded Media](../../figures/lectures/Chappter 5.2 ADC-Sampling and Filter_slide_31_media_rId4.emf)
 
 ---
+

@@ -16,6 +16,8 @@
 ![Cấu trúc MEMS BMP280](../../figures/exam/bmp280_mems_structure.png)
 *Hình 1.1: Sơ đồ mặt cắt cấu trúc MEMS áp điện trở của BMP280. Khoang chân không kín bên dưới màng tạo áp suất tham chiếu tuyệt đối $P_{ref} = 0$, khi áp suất khí quyển tác động làm màng silicon mỏng biến dạng dẫn đến biến đổi điện trở của các phần tử áp điện trở cấy trên bề mặt.*
 
+> **Hộp giải thích hiện tượng vật lý - Cơ chế MEMS áp điện trở:** Khi màng silicon siêu mỏng (diaphragm) bị uốn cong dưới tác dụng của áp suất cơ học từ bên ngoài, nó tạo ra ứng suất cơ học (stress $\sigma$) tác động trực tiếp lên mạng tinh thể silicon. Ứng suất cơ học này làm thay đổi cấu trúc vùng năng lượng (band structure) của bán dẫn silicon, cụ thể là làm dịch chuyển vùng dẫn (conduction band) và vùng hóa trị (valence band), từ đó làm thay đổi bề rộng vùng cấm (band gap $E_g$) cũng như độ linh động của hạt tải điện (carrier mobility $\mu$ - gồm electron và lỗ trống). Sự thay đổi độ linh động hạt tải này dẫn đến sự thay đổi điện trở suất ($\rho$) của vật liệu bán dẫn, tạo nên hiệu ứng áp điện trở (piezoresistive effect) đặc trưng của bán dẫn silicon với độ nhạy cao. Áp suất tuyệt đối ($P$) được đo đạc bằng cách so sánh áp suất khí quyển tác động từ mặt trên của màng silicon đối chiếu với một khoang chân không (vacuum cavity) kín nằm ngay phía dưới màng. Khoang chân không này được chế tạo ở trạng thái gần như chân không hoàn toàn ($P_{ref} \approx 0\text{ Pa}$), đóng vai trò làm điểm tham chiếu áp suất tuyệt đối cố định, giúp đảm bảo phép đo không bị ảnh hưởng bởi sự giãn nở nhiệt hay biến đổi áp suất của lượng khí giam giữ bên trong.
+
 **Cấu tạo (từ dưới lên):**
 1. **Đế silicon (substrate):** Nền cứng đỡ toàn bộ cấu trúc.
 2. **Khoang chân không (vacuum cavity):** Là khoang kín bên dưới màng, tạo áp suất tham chiếu = 0 → đo áp suất tuyệt đối.
@@ -46,6 +48,9 @@
 
 ![Cầu Wheatstone](../../figures/exam/wheatstone_bridge.png)
 *Hình 1.2: Sơ đồ nguyên lý cầu vi sai Wheatstone gồm 4 điện trở áp điện đặt trên màng silicon. Cấu hình này giúp triệt tiêu nhiễu chế độ chung và nhiệt độ, đồng thời tăng độ nhạy đầu ra gấp 4 lần nhờ việc bố trí 2 điện trở tăng điện trở ($+\Delta R$) và 2 điện trở giảm điện trở ($-\Delta R$) xen kẽ.*
+
+> **Hộp giải thích hiện tượng vật lý - Nguyên lý bù nhiệt và vi sai cầu Wheatstone:** Mạch cầu Wheatstone gồm 4 điện trở áp điện được bố trí đối xứng trên màng silicon đóng vai trò triệt tiêu nhiễu chế độ chung và bù nhiệt độ bậc một cực kỳ hiệu quả. Khi nhiệt độ môi trường thay đổi mà áp suất không đổi, cả 4 điện trở trên màng silicon đều chịu sự thay đổi điện trở cùng chiều và cùng độ lớn do hệ số nhiệt điện trở (TCR - Temperature Coefficient of Resistance) của bán dẫn silicon. Theo sơ đồ cầu Wheatstone, điện áp ngõ ra vi sai được tính bằng hiệu điện áp giữa hai nhánh: $V_{out} = V_{ex} \left( \frac{R_4}{R_3 + R_4} - \frac{R_2}{R_1 + R_2} \right)$. Khi nhiệt độ tăng, tất cả điện trở trôi cùng tỷ lệ, dẫn đến tỷ số giữa các điện trở trong mỗi nhánh được bảo toàn, giữ cho điện áp vi sai ngõ ra bằng không ($V_{out} \approx 0\text{ V}$), tức là triệt tiêu hoàn toàn sự trôi nhiệt chế độ chung.
+> Ngoài ra, sơ đồ cầu Wheatstone vi sai toàn phần (full bridge) này làm tăng độ nhạy điện lên gấp 4 lần. Các điện trở được bố trí sao cho dưới ứng suất cơ học uốn cong của màng, hai điện trở ở vị trí căng (tensile stress) sẽ tăng trị số ($+\Delta R$), trong khi hai điện trở ở vị trí nén (compressive stress) sẽ giảm trị số ($-\Delta R$). Sự thay đổi điện trở trái dấu và đối xứng này làm lệch pha tối đa điện áp tại hai nhánh cầu, dẫn đến điện áp vi sai ngõ ra $V_{out} \approx V_{ex} \cdot \frac{\Delta R}{R}$, gấp 4 lần so với trường hợp chỉ sử dụng một điện trở cảm biến đơn lẻ lắp trong mạch chia áp thông thường ($V_{out} \approx V_{ex} \cdot \frac{\Delta R}{4R}$).
 
 **Sơ đồ cầu Wheatstone:**
 - 4 điện trở khuếch tán R₁, R₂, R₃, R₄ bố trí trên màng silicon
@@ -218,6 +223,9 @@ $$\tau = \frac{-\Delta t}{\ln(1-\alpha)}$$
 ![So sánh Kalman vs EMA](../../figures/exam/kalman_vs_ema.png)
 *Hình 1.3: Đồ thị so sánh phản hồi động của bộ lọc Kalman 1D ($Q=0.128, R=1.0$) và bộ lọc EMA ($\alpha=0.1$). Trục hoành là thời gian lấy mẫu, trục tung là độ cao quy đổi. Nhìn vào đồ thị ta thấy bộ lọc EMA ($\alpha=0.1$) có thời gian trễ pha (phase lag) lớn hơn đáng kể trong các bước nhảy độ cao đột ngột, trong khi bộ lọc Kalman bám sát giá trị thực nhanh hơn mà vẫn giữ được độ mịn cao.*
 
+> **Hộp giải thích hiện tượng vật lý - Bản chất trễ pha (Phase Lag) của bộ lọc số:** Trong xử lý tín hiệu số cho cảm biến, luôn tồn tại một sự đánh đổi vật lý không thể tránh khỏi giữa khả năng lọc mượt nhiễu cao tần (smoothing noise) và độ trễ pha (phase lag / delay) của tín hiệu đầu ra. Bộ lọc số có tần số cắt (cut-off frequency) càng thấp thì khả năng lọc sạch các gai nhiễu biên độ lớn càng mạnh, nhưng đồng thời lại làm tăng hằng số thời gian phản hồi $\tau$, khiến tín hiệu đầu ra bị chậm trễ so với sự thay đổi thực tế của môi trường. Bộ lọc số trung bình động lũy thừa (EMA) là bộ lọc đệ quy bậc một; khi cấu hình hệ số lọc $\alpha$ nhỏ (ví dụ $\alpha = 0.1$) để triệt nhiễu, hằng số thời gian $\tau = -\Delta t / \ln(1-\alpha)$ tăng lên đáng kể, tạo ra trễ pha lớn. Khi UAV thay đổi độ cao nhanh chóng đột ngột, EMA phản hồi chậm chạp do phụ thuộc nặng nề vào các giá trị đầu ra quá khứ tích lũy, dẫn đến sai số bám vết động lớn.
+> Ngược lại, bộ lọc Kalman sử dụng mô hình trạng thái không gian (state-space model) kết hợp chu kỳ Dự đoán (Predict) và Cập nhật (Update) liên tục. Trong bước Dự đoán, Kalman ước lượng trạng thái tiếp theo dựa trên mô hình động học vật lý của hệ thống. Trong bước Cập nhật, nó tính toán độ lợi Kalman ($K$) tối ưu dựa trên tỷ số giữa sai số dự báo (nhiễu quá trình $Q$) và sai số đo lường (nhiễu cảm biến $R$). Khi có sự thay đổi đột ngột ở ngõ vào (vượt ngoài mô hình dự đoán ổn định thông thường), Kalman Gain sẽ tự động điều chỉnh tăng lên, giúp hệ thống tin tưởng hơn vào giá trị đo thực tế, từ đó bám sát trạng thái thực một cách nhanh chóng mà không gây ra hiện tượng trễ pha lớn như EMA, trong khi vẫn duy trì độ mịn của tín hiệu khi hệ thống ở trạng thái tĩnh.
+
 **Trade-off cốt lõi:**
 - α nhỏ → τ lớn → **lọc mạnh, phản hồi chậm** (σ thấp, T_rise cao)
 - α lớn → τ nhỏ → **lọc yếu, phản hồi nhanh** (σ cao, T_rise thấp)
@@ -310,6 +318,9 @@ Viết lại: $y[n] = \frac{1}{c} \cdot x[n] + \frac{c-1}{c} \cdot y[n-1]$
 
 ![Self-Heating Effect](../../figures/exam/self_heating.png)
 *Hình 1.4: Biểu đồ thực nghiệm hiện tượng tự gia nhiệt (Self-Heating) của BMP280. Trong chế độ Normal Mode (đo liên tục ở tần số cao), công suất tiêu thụ Joule tỏa ra làm nhiệt độ cảm biến tăng tiệm cận hàm mũ thêm $+0.47^\circ\text{C}$ và mất ~130 giây để bão hòa. Chế độ Forced Mode (chỉ đo khi yêu cầu rồi ngủ sâu) giảm công suất tiêu thụ trung bình và loại bỏ hoàn toàn hiện tượng tự gia nhiệt này.*
+
+> **Hộp giải thích hiện tượng vật lý - Hiệu ứng tích lũy nhiệt Joule (Self-heating):** Hiệu ứng tự gia nhiệt (self-heating) xuất phát từ công suất tỏa nhiệt Joule ($P = I^2R$) sinh ra do dòng điện chạy qua các phần tử áp điện trở của cầu Wheatstone và các mạch chuyển đổi ADC, LDO tích hợp trên cùng đế silicon của cảm biến BMP280. Do kích thước chip MEMS cực kỳ nhỏ gọn, nhiệt lượng này tích lũy lại và làm tăng nhiệt độ của lõi silicon lên cao hơn so với nhiệt độ không khí xung quanh. Quá trình truyền nhiệt ra môi trường tuân theo định luật làm mát của Newton (Newton's law of cooling), trong đó tốc độ thay đổi nhiệt độ tỷ lệ thuận với sự chênh lệch nhiệt độ giữa cảm biến và môi trường: $\frac{dT}{dt} = -k(T - T_{\infty})$. Điều này tạo ra một đường cong tăng nhiệt độ tiệm cận hàm mũ $T(t) = T_{\infty} + \Delta T_{max}(1 - e^{-t/\tau})$, đạt trạng thái cân bằng nhiệt (bão hòa) sau khoảng 130 giây ở Normal Mode với mức tăng nhiệt độ cục bộ $\Delta T \approx +0.47^\circ\text{C}$.
+> Mức tăng nhiệt độ cục bộ này làm thay đổi mật độ không khí cục bộ ngay sát bề mặt cảm biến và làm trôi các đặc tính cơ điện của màng silicon, dẫn đến sai lệch trong phép đo áp suất tĩnh (lệch khoảng 1 Pa). Do quan hệ giữa áp suất và độ cao theo công thức barometric, sai số áp suất 1 Pa này dịch chuyển phép tính độ cao tương đương với một sai số độ cao khoảng ~8.4 cm. Chế độ Forced Mode giải quyết triệt để vấn đề này bằng cách đưa chip vào trạng thái ngủ sâu (deep sleep) ngay sau khi hoàn thành một chu kỳ đo ngắn (hoạt động khoảng 5ms rồi tắt), làm giảm chu kỳ hoạt động (duty cycle) xuống dưới 0.1%. Dòng điện tiêu thụ trung bình giảm từ 720 µA xuống chỉ còn ~3 µA, ngăn chặn hoàn toàn sự tích lũy nhiệt Joule trên đế silicon.
 
 **Cơ chế vật lý:** Dòng điện qua cầu Wheatstone và ADC sinh nhiệt theo định luật Joule ($P = I^2R$). Ở Normal Mode + OS×16: dòng ~720 µA, duty cycle ~99% → lõi silicon nóng lên cục bộ.
 
@@ -649,8 +660,316 @@ Nhà sản xuất Bosch khắc phục cả hai loại trôi nhiệt này bằng 
 
 ---
 
+## Câu 21. Cấu trúc vật lý của màng silicon MEMS áp điện trở và phân tích độ nhạy cơ-điện (Electro-mechanical Sensitivity)
+
+### 📋 Đề bài
+> Phân tích cấu trúc vật lý chi tiết của màng silicon cảm biến áp suất MEMS BMP280 (kích thước, định hướng tinh thể, quy trình chế tạo cấy ion). Thiết lập mối quan hệ toán học giữa ứng suất cơ học và sự thay đổi điện trở suất (hiệu ứng áp điện trở bán dẫn) qua công thức tổng quát và công thức thực tế định hướng tinh thể [110] trên phiến silicon (100). Giải thích ý nghĩa của hệ số áp điện trở $\pi_{44}$.
+
+### ✅ Gợi ý trả lời
+
+**1. Cấu trúc vật lý và chế tạo màng silicon (diaphragm):**
+- **Đế và màng:** Màng silicon mỏng của BMP280 được chế tạo bằng phương pháp ăn mòn dị hướng (anisotropic etching) hoặc ăn mòn ion phản ứng sâu (DRIE - Deep Reactive Ion Etching) từ phiến silicon đơn tinh thể (monocrystalline silicon wafer). Màng có dạng hình vuông hoặc tròn với đường kính khoảng $d \approx 200 - 500\text{ }\mu\text{m}$ và độ dày cực kỳ mỏng từ $1.5\text{ }\mu\text{m}$ đến $5\text{ }\mu\text{m}$.
+- **Cấy ion (Ion Implantation):** Để tạo ra các phần tử áp điện trở (piezoresistors), tạp chất loại P (thường là boron - B) được cấy trực tiếp vào các khu vực chịu ứng suất cơ học lớn nhất ở rìa màng silicon loại N (N-type substrate). Nồng độ cấy ion được kiểm soát ở mức trung bình (khoảng $10^{18}\text{ atoms/cm}^3$) để tối ưu hóa hệ số áp điện trở và giảm thiểu hệ số trôi nhiệt điện trở (TCR).
+- **Định hướng tinh thể (Crystal Orientation):** Silicon là vật liệu không đẳng hướng (anisotropic). Để đạt độ nhạy áp điện trở lớn nhất, các điện trở loại P thường được định hướng dọc theo trục tinh thể $[110]$ trên bề mặt phiến silicon định hướng $(100)$.
+
+**2. Công thức liên hệ ứng suất cơ học và sự thay đổi điện trở:**
+Mối quan hệ tổng quát giữa sự thay đổi điện trở tương đối $\frac{\Delta R}{R}$ và ứng suất cơ học được mô tả qua ứng suất dọc ($\sigma_l$ - longitudinal stress) và ứng suất ngang ($\sigma_t$ - transverse stress):
+
+$$\frac{\Delta R}{R} = \pi_l \sigma_l + \pi_t \sigma_t$$
+
+Trong đó, $\pi_l$ và $\pi_t$ là các hệ số áp điện trở tương ứng.
+
+Đối với điện trở loại P định hướng dọc theo trục $[110]$ trên bề mặt $(100)$, các hệ số này liên hệ trực tiếp với hệ số áp điện trở cắt $\pi_{44}$ của silicon (các hệ số khác như $\pi_{11}$ và $\pi_{12}$ rất nhỏ và có thể bỏ qua):
+
+$$\pi_l \approx \frac{1}{2}\pi_{44}, \quad \pi_t \approx -\frac{1}{2}\pi_{44}$$
+
+Khi màng silicon uốn cong dưới tác dụng của áp suất khí quyển, tại rìa màng xuất hiện ứng suất dọc $\sigma_l = \sigma$ là chủ đạo, ứng suất ngang $\sigma_t$ nhỏ hơn nhiều, dẫn đến công thức xấp xỉ thực tế:
+
+$$\frac{\Delta R}{R} \approx \frac{1}{2} \pi_{44} \cdot \sigma$$
+
+**3. Ý nghĩa của hệ số áp điện trở $\pi_{44}$:**
+- Với silicon loại P, $\pi_{44}$ có giá trị dương rất lớn (khoảng $+138.1 \times 10^{-11}\text{ Pa}^{-1}$ ở nhiệt độ phòng). Do đó, ứng suất kéo căng ($\sigma > 0$) sẽ làm tăng điện trở tương đối ($\Delta R/R > 0$) và ứng suất nén sẽ làm giảm điện trở tương đối.
+- Giá trị $\pi_{44}$ lớn giúp silicon nhạy hơn kim loại gấp hàng chục lần (hệ số gauge factor của silicon đạt ~100-170 so với ~2 ở kim loại), cho phép đo được những biến động áp suất cực nhỏ.
+
+---
+
+## Câu 22. Chi tiết toán học của thuật toán bù trôi nhiệt kỹ thuật số (Digital Temperature Drift Compensation) sử dụng 12 tham số NVM
+
+### 📋 Đề bài
+> Trình bày chi tiết toán học của thuật toán hiệu chuẩn và bù trôi nhiệt tích hợp trong cảm biến BMP280. Viết đầy đủ các phương trình toán học chuyển đổi từ giá trị ADC thô (`adc_T`, `adc_P`) sang nhiệt độ thực tế ($^\circ\text{C}$) và áp suất thực tế ($\text{Pa}$) sử dụng 12 tham số hiệu chuẩn lưu trong NVM của nhà sản xuất. Giải thích ý nghĩa của biến trung gian `t_fine`.
+
+### ✅ Gợi ý trả lời
+
+**1. Các tham số hiệu chuẩn lưu trong bộ nhớ NVM:**
+BMP280 chứa 12 tham số hiệu chuẩn 16-bit và 8-bit được nhà sản xuất ghi sẵn trong bộ nhớ không khả biến (NVM):
+- Nhiệt độ (3 tham số): `dig_T1` (uint16_t), `dig_T2` (int16_t), `dig_T3` (int16_t)
+- Áp suất (9 tham số): `dig_P1` (uint16_t), `dig_P2` đến `dig_P9` (int16_t)
+
+**2. Thuật toán bù nhiệt độ:**
+Sử dụng giá trị nhiệt độ thô `adc_T` (20-bit) để tính toán hai đại lượng trung gian $var_1$ và $var_2$:
+
+$$var_1 = \left( \frac{adc\_T}{16384.0} - \frac{dig\_T1}{1024.0} \right) \cdot dig\_T2$$
+
+$$var_2 = \left( \left(\frac{adc\_T}{131072.0} - \frac{dig\_T1}{8192.0}\right) \cdot \left(\frac{adc\_T}{131072.0} - \frac{dig\_T1}{8192.0}\right) \right) \cdot dig\_T3$$
+
+Biến `t_fine` đại diện cho nhiệt độ thực tế của chip dưới dạng số dấu chấm động có độ phân giải rất cao, được tính bằng tổng:
+
+$$t\_fine = var_1 + var_2$$
+
+Nhiệt độ thực tế ($T$, đơn vị $^\circ\text{C}$) được quy đổi từ `t_fine`:
+
+$$T = \frac{t\_fine}{5120.0}$$
+
+**3. Thuật toán bù áp suất:**
+Sử dụng giá trị áp suất thô `adc_P` (20-bit) và biến trung gian `t_fine` để thực hiện phép bù đa thức phi tuyến bậc 2 và bậc 3 theo trình tự sau:
+
+$$var_1 = \left(\frac{t\_fine}{2.0}\right) - 64000.0$$
+
+$$var_2 = var_1 \cdot var_1 \cdot \frac{dig\_P6}{32768.0}$$
+
+$$var_2 = var_2 + var_1 \cdot dig\_P5 \cdot 2.0$$
+
+$$var_2 = \left(\frac{var_2}{4.0}\right) + \left(dig\_P4 \cdot 65536.0\right)$$
+
+$$var_1 = \left( \frac{dig\_P3 \cdot var_1 \cdot var_1}{524288.0} + dig\_P2 \cdot var_1 \right) \cdot \frac{1}{524288.0}$$
+
+$$var_1 = \left( 1.0 + \frac{var_1}{32768.0} \right) \cdot dig\_P1$$
+
+Nếu $var_1 == 0$, thuật toán trả về áp suất bằng $0$ để tránh lỗi chia cho $0$. Ngược lại:
+
+$$P_{raw} = 1048576.0 - adc\_P$$
+
+$$P = \left( P_{raw} - \frac{var_2}{4096.0} \right) \cdot \frac{6250.0}{var_1}$$
+
+$$var_1 = dig\_P9 \cdot P \cdot P / 2147483648.0$$
+
+$$var_2 = P \cdot dig\_P8 / 32768.0$$
+
+$$P_{compensated} = P + \frac{var_1 + var_2 + dig\_P7}{16.0}$$
+
+Áp suất ngõ ra $P_{compensated}$ có đơn vị là Pascal ($\text{Pa}$).
+
+**4. Ý nghĩa vật lý của biến trung gian `t_fine`:**
+- `t_fine` đóng vai trò là tham số liên kết bù trừ nhiệt độ cho phép đo áp suất. Nó phản ánh chính xác sự trôi nhiệt của các phần tử cơ điện trên màng silicon và cầu Wheatstone tại thời điểm đo đạc thực tế.
+- Nhờ có `t_fine`, việc tính toán bù áp suất trở nên độc lập với sự thay đổi nhiệt độ làm việc của cảm biến, triệt tiêu sai số nhiệt độ hiệu quả từ $-40$ đến $+85^\circ\text{C}$.
+
+---
+
+## Câu 23. Phân tích sai số không đối xứng (Asymmetric Error) và trôi nhiệt của cầu Wheatstone vi sai trong BMP280
+
+### 📋 Đề bài
+> Phân tích nguyên nhân vật lý gây ra sai số không đối xứng (Asymmetric Error) và trôi nhiệt điểm không (Zero Drift) trong mạch cầu Wheatstone của cảm biến áp suất MEMS BMP280. Thiết lập mô hình toán học mô tả ảnh hưởng của sự mất cân bằng điện trở ban đầu và sự không đồng nhất về hệ số nhiệt điện trở (TCR) giữa các nhánh cầu. Trình bày giải pháp bù đắp điện tử.
+
+### ✅ Gợi ý trả lời
+
+**1. Nguyên nhân vật lý gây sai số không đối xứng (Asymmetric Error):**
+- Trong quy trình chế tạo vi cơ khí bán dẫn (photolithography, cấy ion, ăn mòn màng), luôn tồn tại các dung sai chế tạo không thể tránh khỏi.
+- Các sai lệch về kích thước hình học của màng silicon, sự định vị lệch tâm nhẹ của các điện trở áp điện so với vùng ứng suất cực đại, và sự phân bố nồng độ chất tạp chất cấy ion không đồng đều làm cho trị số của 4 điện trở áp điện không hoàn toàn bằng nhau khi không có áp suất tác động ($R_1 \neq R_2 \neq R_3 \neq R_4$).
+- Sự mất đối xứng này tạo ra một điện áp lệch điểm không (Offset Voltage) ban đầu khác 0 ngay cả khi áp suất tuyệt đối $P = 0$.
+
+**2. Mô hình toán học trôi nhiệt điểm không do không đồng nhất TCR:**
+Hệ số nhiệt điện trở (TCR - Temperature Coefficient of Resistance, ký hiệu $\alpha$) của mỗi điện trở phụ thuộc vào nồng độ cấy ion tạp chất. Do sự không đồng đều trong quá trình cấy ion, các điện trở có hệ số nhiệt điện trở khác nhau nhẹ: $\alpha_1 \neq \alpha_2 \neq \alpha_3 \neq \alpha_4$.
+
+Điện trở của mỗi phần tử tại nhiệt độ $T$ được mô tả bởi:
+
+$$R_i(T) = R_i(T_0) [1 + \alpha_i (T - T_0)]$$
+
+Khi lắp vào mạch cầu Wheatstone với điện áp cấp nguồn $V_{ex}$, điện áp ngõ ra vi sai tại áp suất không đổi là:
+
+$$V_{out}(T) = V_{ex} \left( \frac{R_4(T)}{R_3(T) + R_4(T)} - \frac{R_2(T)}{R_1(T) + R_2(T)} \right)$$
+
+Thay biểu thức trôi nhiệt của các điện trở vào, ta thấy điện áp ngõ ra vi sai trôi phi tuyến theo nhiệt độ:
+
+$$V_{out}(T) \approx V_{out}(T_0) + \Delta V_{drift}(T)$$
+
+Trong đó, tốc độ trôi nhiệt điểm không (Zero Drift Rate) phụ thuộc vào sự chênh lệch của các hệ số nhiệt điện trở:
+
+$$\frac{dV_{out}}{dT} \approx \frac{V_{ex}}{4} \cdot \left[ (\alpha_4 - \alpha_3) - (\alpha_2 - \alpha_1) \right]$$
+
+Nếu các điện trở hoàn hảo ($\alpha_1 = \alpha_2 = \alpha_3 = \alpha_4$), đạo hàm này bằng 0. Nhưng do sự mất đối xứng thực tế, hiệu số này khác 0, dẫn đến hiện tượng trôi nhiệt điểm không (Zero Drift).
+
+**3. Giải pháp bù đắp điện tử:**
+- **Bù thô bằng phần cứng tương tự (Analog Front-End):** Sử dụng các kỹ thuật thiết kế mạch tích hợp như tự động triệt offset (auto-zeroing), bộ khuếch đại chopper (chopper stabilization) để loại bỏ offset tĩnh và trôi chậm của Op-Amp ngõ ra.
+- **Bù tinh bằng phần mềm số (Digital Calibration):** Sử dụng các tham số hiệu chuẩn `dig_P1` đến `dig_P9` lưu trong NVM. Các phương trình bù áp suất của BMP280 sử dụng `t_fine` để tính toán chính xác lượng dịch chuyển điểm không $Offset(T)$ và hệ số tỉ lệ $Sensitivity(T)$ tương ứng với từng mức nhiệt độ cụ thể, triệt tiêu sai số phi tuyến bậc cao của cầu Wheatstone.
+
+---
+
+## Câu 24. Cấu hình, cài đặt code và phân tích đáp ứng tần số (Frequency Response / Bode) của các bộ lọc số (EMA, IIR, FIR, Kalman) trên ESP32-C3 cho BMP280
+
+### 📋 Đề bài
+> Phân tích đáp ứng tần số, độ dốc suy hao (attenuation slope) và độ trễ pha (phase lag) của 4 bộ lọc số: EMA, IIR Butterworth bậc 2, FIR Moving Average (N=8) và Kalman 1D. Viết các đoạn code C/C++ hoàn chỉnh, tối ưu hóa hiệu năng để chạy trên ESP32-C3 cho từng bộ lọc này nhằm xử lý dữ liệu áp suất/độ cao từ cảm biến BMP280. Thảo luận về tính phù hợp của từng bộ lọc trong các ứng dụng điều khiển động học (như UAV/drone giữ độ cao) và đo đạc tĩnh (như trạm quan trắc thời tiết).
+
+### ✅ Gợi ý trả lời
+
+**1. Phân tích đáp ứng tần số và trễ pha (Bode Analysis):**
+- **EMA (Exponential Moving Average):** Là bộ lọc thông thấp IIR bậc 1. Công thức truyền đạt: $H(z) = \frac{\alpha}{1 - (1-\alpha)z^{-1}}$. Tần số cắt $3\text{ dB}$ phụ thuộc vào hệ số $\alpha$. Trễ pha tăng nhanh khi tần số tiến gần tần số cắt, độ dốc suy hao thấp ($-20\text{ dB/decade}$).
+- **IIR Butterworth bậc 2:** Đáp ứng phẳng nhất trong dải thông (maximally flat). Độ dốc suy hao sắc nét hơn ($-40\text{ dB/decade}$), giúp triệt tiêu nhiễu cao tần cực tốt nhưng gây trễ pha lớn tại tần số cắt.
+- **FIR Moving Average (N=8):** Công thức $y[n] = \frac{1}{N}\sum_{i=0}^{N-1} x[n-i]$. Đáp ứng tần số có dạng hàm sinc với các điểm triệt tiêu (notch) tại các tần số là bội số của $F_s/N$. Trễ pha là tuyến tính (linear phase delay $= \frac{N-1}{2}$ mẫu), giúp bảo toàn hình dạng tín hiệu không bị méo pha, nhưng suy hao dải dừng kém và xuất hiện các búp sóng phụ (sidelobes).
+- **Kalman 1D:** Không phải là một bộ lọc tần số cắt cố định mà là một bộ lọc thích nghi tối ưu theo trạng thái. Đáp ứng tần số của nó thay đổi động dựa trên Kalman Gain $K$. Khi sai số đo lớn, nó mở rộng băng thông để bám nhanh; khi trạng thái tĩnh, nó thu hẹp băng thông để lọc mượt, mang lại sự kết hợp tối ưu giữa trễ pha thấp nhất trong quá trình chuyển động và suy hao nhiễu cao nhất ở trạng thái tĩnh.
+
+**2. Code C/C++ hoàn chỉnh trên ESP32-C3:**
+
+```cpp
+#include <Arduino.h>
+
+// 1. Bộ lọc EMA (Exponential Moving Average)
+class EmaFilter {
+private:
+    float alpha;
+    float y_prev;
+    bool is_initialized;
+public:
+    EmaFilter(float a) : alpha(a), y_prev(0.0f), is_initialized(false) {}
+    float filter(float x) {
+        if (!is_initialized) {
+            y_prev = x;
+            is_initialized = true;
+        }
+        float y = alpha * x + (1.0f - alpha) * y_prev;
+        y_prev = y;
+        return y;
+    }
+};
+
+// 2. Bộ lọc IIR Butterworth bậc 2 (Fs = 50Hz, Fc = 5Hz)
+class IirButterworth2nd {
+private:
+    float b0, b1, b2;
+    float a1, a2;
+    float x1, x2;
+    float y1, y2;
+    bool is_initialized;
+public:
+    IirButterworth2nd() : x1(0), x2(0), y1(0), y2(0), is_initialized(false) {
+        // Hệ số tính toán sẵn cho Fs = 50Hz, Fc = 5Hz
+        b0 = 0.067455f; b1 = 0.134910f; b2 = 0.067455f;
+        a1 = -1.142980f; a2 = 0.412800f;
+    }
+    float filter(float x) {
+        if (!is_initialized) {
+            x1 = x2 = y1 = y2 = x;
+            is_initialized = true;
+        }
+        float y = b0 * x + b1 * x1 + b2 * x2 - a1 * y1 - a2 * y2;
+        x2 = x1; x1 = x;
+        y2 = y1; y1 = y;
+        return y;
+    }
+};
+
+// 3. Bộ lọc FIR Moving Average (N = 8)
+class FirMovingAverage {
+private:
+    static const int N = 8;
+    float buffer[N];
+    int write_index;
+    float sum;
+    bool is_initialized;
+public:
+    FirMovingAverage() : write_index(0), sum(0.0f), is_initialized(false) {
+        memset(buffer, 0, sizeof(buffer));
+    }
+    float filter(float x) {
+        if (!is_initialized) {
+            for (int i = 0; i < N; i++) buffer[i] = x;
+            sum = x * N;
+            is_initialized = true;
+            return x;
+        }
+        sum -= buffer[write_index];
+        buffer[write_index] = x;
+        sum += x;
+        write_index = (write_index + 1) % N;
+        return sum / N;
+    }
+};
+
+// 4. Bộ lọc Kalman 1D
+class Kalman1D {
+private:
+    float Q;      // Process noise covariance
+    float R;      // Measurement noise covariance
+    float x_est;  // Estimated state
+    float p_est;  // Estimated error covariance
+    bool is_initialized;
+public:
+    Kalman1D(float q, float r) : Q(q), R(r), x_est(0.0f), p_est(1.0f), is_initialized(false) {}
+    float filter(float z) {
+        if (!is_initialized) {
+            x_est = z;
+            is_initialized = true;
+        }
+        // Predict
+        float x_pred = x_est;
+        float p_pred = p_est + Q;
+        // Update
+        float K = p_pred / (p_pred + R);
+        x_est = x_pred + K * (z - x_pred);
+        p_est = (1.0f - K) * p_pred;
+        return x_est;
+    }
+};
+```
+
+**3. Thảo luận ứng dụng phù hợp:**
+- **UAV/Drone giữ độ cao (Altitude Hold):**
+  - *Yêu cầu:* Trễ pha cực thấp để tránh làm mất ổn định vòng lặp phản hồi PID (gây dao động tự kích).
+  - *Lựa chọn:* **Kalman 1D** kết hợp với cảm biến gia tốc kế (IMU) là tối ưu nhất vì nó giảm thiểu trễ pha tối đa trong khi bám sát động học tốc độ cao. Nếu chỉ dùng bộ lọc số tĩnh, **EMA** với $\alpha$ lớn ($0.5 - 0.8$) hoặc **FIR N nhỏ** là sự lựa chọn hợp lý, trong khi **IIR Butterworth bậc 2** không phù hợp do trễ pha lớn tại tần số cắt.
+- **Trạm thời tiết IoT (Weather Station):**
+  - *Yêu cầu:* Độ mịn tín hiệu tối đa, khử trôi và triệt tiêu hoàn toàn nhiễu gió cao tần. Trễ pha vài giây không ảnh hưởng đến hệ thống.
+  - *Lựa chọn:* **EMA với $\alpha = 0.1$** hoặc **IIR Butterworth bậc 2** là giải pháp lý tưởng. Các bộ lọc này sử dụng rất ít tài nguyên tính toán và mang lại độ mịn cực cao, theo dõi xu hướng áp suất khí quyển dài hạn ổn định.
+
+---
+
+## Câu 25. Thiết kế mạch tiền xử lý tương tự (Analog Front-End) sử dụng Instrumentation Amplifier AD620 và Bộ lọc chống răng cưa (Anti-Aliasing Filter)
+
+### 📋 Đề bài
+> Thiết kế chi tiết mạch tiền xử lý tương tự (Analog Front-End) cho một cảm biến cầu Wheatstone (tương tự nguyên lý hoạt động của BMP280 nhưng ngõ ra tương tự). Mạch sử dụng bộ khuếch đại đo lường AD620 để đưa tín hiệu vi sai nhỏ (dải đo $\pm 10\text{ mV}$) lên dải đo của bộ chuyển đổi ADC ($0 - 3.3\text{ V}$) của ESP32-C3. Tính toán điện trở Gain $R_G$. Thiết kế bộ lọc thông thấp RC chống răng cưa phần cứng trước ADC với tần số cắt $F_c < F_s / 2$ (cho biết tần số lấy mẫu $F_s = 100\text{ Hz}$). Thảo luận về việc kết hợp bộ lọc chống răng cưa phần cứng với kỹ thuật oversampling bằng phần mềm.
+
+### ✅ Gợi ý trả lời
+
+**1. Sơ đồ nguyên lý mạch AFE:**
+- **Cầu Wheatstone:** Nhánh cầu gồm 4 điện trở được cấp nguồn $V_{ex} = 3.3\text{ V}$. Hai ngõ ra vi sai của cầu là $V_+$ và $V_-$ được kết nối trực tiếp vào chân đầu vào không đảo (chân 3) và đầu vào đảo (chân 2) của chip AD620.
+- **AD620:**
+  - Chân nguồn: Chân 7 kết nối với nguồn dương $+5\text{ V}$ (hoặc $+3.3\text{ V}$), chân 4 kết nối với đất $GND$ (hoặc nguồn âm $-5\text{ V}$ cho cấu hình nguồn kép). Để hoạt động tốt với dải đo đơn cực $0-3.3\text{ V}$, chân Reference (chân 5) của AD620 được nối với điện áp tham chiếu offset $V_{ref} = 1.65\text{ V}$ (tạo ra từ mạch chia áp đệm Op-Amp) để dịch chuyển điểm không vi sai lên giữa thang đo.
+  - Điện trở Gain $R_G$: Mắc giữa chân 1 và chân 8.
+- **Bộ lọc chống răng cưa (Anti-Aliasing Filter):** Ngõ ra của AD620 (chân 6) được nối qua một bộ lọc thông thấp RC thụ động bậc một gồm điện trở $R$ nối tiếp và tụ điện $C$ nối xuống đất $GND$. Ngõ ra trên tụ điện $C$ được kết nối trực tiếp vào kênh đầu vào ADC của ESP32-C3.
+
+**2. Tính toán điện trở Gain $R_G$:**
+- Dải tín hiệu ngõ vào vi sai: $V_{in,diff} = V_+ - V_- = \pm 10\text{ mV}$ (tổng dải đo đỉnh-đỉnh là $20\text{ mV}$).
+- Dải điện áp ngõ ra mong muốn của ADC: $0 - 3.3\text{ V}$ (tổng dải đo đỉnh-đỉnh là $3.3\text{ V}$).
+- Độ lợi khuếch đại cần thiết:
+
+$$G = \frac{V_{out,p-p}}{V_{in,diff,p-p}} = \frac{3.3\text{ V}}{20\text{ mV}} = 165$$
+
+- Áp dụng công thức tính điện trở Gain cho AD620:
+
+$$R_G = \frac{49.4\text{ k}\Omega}{G - 1} = \frac{49400\Omega}{165 - 1} = \frac{49400}{164} \approx 301.2\Omega$$
+
+Ta chọn điện trở thực tế chuẩn là $301\Omega$ (dung sai 1%).
+
+**3. Thiết kế bộ lọc RC chống răng cưa:**
+- Tần số lấy mẫu: $F_s = 100\text{ Hz}$. Theo định luật Nyquist, tần số cắt của bộ lọc chống răng cưa phải nhỏ hơn tần số Nyquist: $F_c < \frac{F_s}{2} = 50\text{ Hz}$.
+- Để đảm bảo suy hao nhiễu tốt ở tần số Nyquist, ta chọn tần số cắt an toàn ở mức $F_c = 10\text{ Hz}$ (thấp hơn nhiều so với $50\text{ Hz}$ để lọc sạch nhiễu tần số cao).
+- Công thức tần số cắt bộ lọc RC bậc một:
+
+$$F_c = \frac{1}{2\pi R C}$$
+
+Chọn tụ điện chuẩn $C = 1\text{ }\mu\text{F}$ để giảm trở kháng ngõ ra của mạch lọc. Tính điện trở $R$:
+
+$$R = \frac{1}{2\pi \cdot F_c \cdot C} = \frac{1}{2\pi \cdot 10\text{ Hz} \cdot 10^{-6}\text{ F}} \approx 15.9\text{ k}\Omega$$
+
+Ta chọn điện trở thực tế chuẩn là $16\text{ k}\Omega$.
+
+**4. Thảo luận kết hợp bộ lọc phần cứng RC và oversampling phần mềm:**
+- Bộ lọc RC phần cứng bậc một có độ dốc suy hao khá phẳng ($-20\text{ dB/decade}$), nên các thành phần nhiễu tần số cao gần $50\text{ Hz}$ vẫn có khả năng bị gập về dải thông nếu không được lọc thêm.
+- Kỹ thuật oversampling bằng phần mềm (lấy mẫu ở tần số rất cao $F_{os} = 1.6\text{ kHz}$ rồi dùng bộ lọc trung bình số để nén băng thông về $100\text{ Hz}$) hoạt động phối hợp tuyệt vời với bộ lọc RC phần cứng.
+- Bộ lọc phần cứng RC đóng vai trò triệt tiêu các thành phần nhiễu tần số siêu cao (như nhiễu điện từ, nhiễu xung nhọn) vốn có thể làm bão hòa đầu vào ADC hoặc vượt quá khả năng xử lý của bộ lọc số. Phần mềm oversampling tiếp tục nâng độ phân giải hiệu dụng (ENOB) của ADC lên thêm vài bit và tạo ra một bộ lọc số sắc nét hơn, giúp hệ thống đạt độ chính xác cực cao mà không cần dùng đến các bộ lọc analog bậc cao phức tạp và đắt tiền.
+
+---
+
 > **📌 Ghi chú ôn tập ôn thi Vấn đáp cuối kỳ:**
-> - Ngân hàng gồm **20 câu hỏi trọng tâm** phủ kín 5 tuần báo cáo thực nghiệm và các bài giảng lý thuyết (Mạch đo, Bộ lọc số, Định luật lấy mẫu, Trôi nhiệt).
+> - Ngân hàng gồm **25 câu hỏi trọng tâm** phủ kín 5 tuần báo cáo thực nghiệm và các bài giảng lý thuyết (Mạch đo, Bộ lọc số, Định luật lấy mẫu, Trôi nhiệt).
 > - Nhớ các số liệu chính của BMP280: R² ≈ 0.999 (độ tuyến tính), σ giảm 34% ở OS X4, bước nhảy |Δ| giảm 10 lần ở IIR x16, ΔT = +0.47°C do tự gia nhiệt ở Normal Mode, độ phân giải thực tế đạt tới 2.7cm.
 > - Nắm vững 3 bộ lọc chính: EMA (α), Kalman 1D (Q, R, K), IIR nội bộ của chip (c).
 > - Công thức quan trọng: Barometric formula quy đổi độ cao ($1 \text{ hPa} \approx 8.43\text{ m}$), cầu Wheatstone ($V_{out} = V_{ex} \cdot \frac{\Delta R}{R}$), mạch AD620 ($G = 1 + 49.4\text{k}\Omega / R_G$).

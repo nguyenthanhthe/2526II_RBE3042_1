@@ -4,25 +4,21 @@
 
 ---
 
-
 ## Trang 1
 
-### KỸ THUẬT ĐO LƯỜNG 
-
+- KỸ THUẬT ĐO LƯỜNG
 - VÀ CẢM BIẾN
 - Đề cương ôn tập cuối kỳ
 - Nguyễn Ngọc Linh
 - nlnguyen@vnu.edu.vn
 
-
+![Trang 1](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_1.png)
 
 ---
 
-
 ## Trang 2
 
-### 1 
-
+- 1
 - Phần I: Lý thuyết:
 - Câu 1: Trình bày phương pháp và các lưu ý khi đo dòng điện
 - Câu 2: Trình bày phương pháp và các lưu ý khi đo điện áp
@@ -31,15 +27,13 @@
 - Câu 5: Trình bày các sơ đồ đo công suất tác dụng sử dụng oát mét.
 - Câu 6: Trình bày cấu tạo, nguyên lý của các loại cảm biến đã học.
 
-
+![Trang 2](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_2.png)
 
 ---
 
-
 ## Trang 3
 
-### 2 
-
+- 2
 - Phần II: Bài tập
 - Đo điện áp – dòng điện
 - Bài 1. Một vôn-kế có tầm đo 5V được mắc vào mạch đo điện áp 2 đầu điện trở 𝑅𝑅2 như hình
@@ -77,27 +71,21 @@
 - có thể sử dụng mà sai số gây ra do tải của vôn-kế nhỏ hơn 3%
 - Bài 6. Tính độ nhạy AC, DC và điện trở 𝑅𝑅𝑆𝑆 trong mạch đo sau:
 
+![Trang 3](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_3.png)
 
+![Hình ảnh trang 3](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_3_img_0.png)
 
 ![Hình ảnh trang 3](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_3_img_1.png)
 
-
 ![Hình ảnh trang 3](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_3_img_2.png)
-
 
 ![Hình ảnh trang 3](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_3_img_3.png)
 
-
-![Hình ảnh trang 3](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_3_img_4.png)
-
-
 ---
-
 
 ## Trang 4
 
-### 3 
-
+- 3
 - Bài 7. Một vôn-kế AC được dùng để đo điện áp hai đầu điện trở 𝑅𝑅2 như hình vẽ. Biết vôn-kế
 - dùng cơ cấu đo từ điện có 𝐼𝐼𝑓𝑓𝑓𝑓= 100𝜇𝜇𝜇𝜇, điện trở dây quấn 𝑅𝑅𝑚𝑚= 1.5𝑘𝑘Ω, sử dụng mạch chỉnh
 - lưu bán kỳ và có tầm đo 10V. Hãy cho biết trị giá đọc được trên vôn-kế
@@ -125,27 +113,21 @@
 - Công tơ tác dụng 3 pha 2 phần tử có cuộn dòng ở các pha A, C
 - Công tơ phản kháng 3 pha 2 phần tử có cuộn dây nối tiếp phụ ở pha A
 
+![Trang 4](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_4.png)
 
+![Hình ảnh trang 4](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_4_img_0.png)
 
-![Hình ảnh trang 4](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_4_img_5.png)
+![Hình ảnh trang 4](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_4_img_1.png)
 
+![Hình ảnh trang 4](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_4_img_2.png)
 
-![Hình ảnh trang 4](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_4_img_6.png)
-
-
-![Hình ảnh trang 4](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_4_img_7.png)
-
-
-![Hình ảnh trang 4](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_4_img_8.png)
-
+![Hình ảnh trang 4](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_4_img_3.png)
 
 ---
 
-
 ## Trang 5
 
-### 4 
-
+- 4
 - b. Vẽ sơ đồ kết hợp BU, BI và công tơ 3 pha đo năng lượng tác dụng và năng lượng phản
 - kháng cho lưới 3 pha cao thế.Yêu cầu:
 - Công tơ tác dụng 3 pha 2 phần tử có cuộn dòng ở các pha B, C
@@ -179,15 +161,13 @@
 - Công tơ tác dụng 3 pha 2 phần tử có cuộn dòng ở các pha A, B
 - Công tơ phản kháng 3 pha 3 phần tử
 
-
+![Trang 5](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_5.png)
 
 ---
 
-
 ## Trang 6
 
-### 5 
-
+- 5
 - j. Vẽ sơ đồ kết hợp BU, BI và công tơ 3 pha đo năng lượng tác dụng và năng lượng phản
 - kháng cho lưới 3 pha cao thế.Yêu cầu:
 - Công tơ tác dụng 3 pha 2 phần tử có cuộn dòng ở các pha A, C
@@ -232,18 +212,15 @@
 - số nhiệt 0.00392Ω/Ω/𝑜𝑜𝐶𝐶. Xác định nhiệt độ đọc bởi cảm biến nếu điện trở của cảm biến là
 - 200Ω
 
+![Trang 6](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_6.png)
 
-
-![Hình ảnh trang 6](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_6_img_9.png)
-
+![Hình ảnh trang 6](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_6_img_0.png)
 
 ---
 
-
 ## Trang 7
 
-### 6 
-
+- 6
 - Bài 20.
 - Một nhiệt điện trở có hệ số nhiệt là 0.004/𝑜𝑜𝐶𝐶 và điện trở 𝑅𝑅= 106Ω ở 20𝑜𝑜𝐶𝐶.
 - Nhiệt điện trở này được mắc vào mạch cầu có 𝑅𝑅1 = 𝑅𝑅2 = 𝑅𝑅3 = 100Ω. Nguồn điện cung cấp
@@ -253,6 +230,7 @@
 - điện trở 𝑅𝑅3. Ban đầu mạch được mắc như hình vẽ. Khi cầu cân bằng, có 𝑅𝑅3 = 151Ω. Đổi chỗ
 - 𝑅𝑅2 và 𝑅𝑅4 cho nhau cầu lại cân bằng khi 𝑅𝑅3 = 182.5Ω. Tính giá trị 𝑅𝑅1
 
-
+![Trang 7](../../figures/lectures/de-cuong-on-tap-ky-thuat-do-luong-va-cam-bien-k62-uet-450_page_7.png)
 
 ---
+
