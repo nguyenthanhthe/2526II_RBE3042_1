@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Handbook of Modern Sensors"
+parent: "Tài liệu Tham khảo"
+nav_order: 1
+---
+
 # Tài liệu Tham khảo: Handbook of modern sensors  physics, designs, and applications by Fraden, Jacob (z-lib.org)
 
 - **Tên tệp gốc**: `Handbook of modern sensors  physics, designs, and applications by Fraden, Jacob (z-lib.org).pdf`

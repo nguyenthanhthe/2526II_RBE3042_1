@@ -1,3 +1,10 @@
+---
+layout: default
+title: "Measurement & Instrumentation Principles"
+parent: "Tài liệu Tham khảo"
+nav_order: 2
+---
+
 # Tài liệu Tham khảo: Lock-in ...Measurement and Instrumentation Principles - Third edition - Alan S Morris
 
 - **Tên tệp gốc**: `Lock-in ...Measurement and Instrumentation Principles - Third edition - Alan S Morris.pdf`
