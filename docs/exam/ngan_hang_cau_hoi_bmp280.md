@@ -60,8 +60,8 @@ nav_order: 1
 
 **Sơ đồ cầu Wheatstone:**
 - 4 điện trở khuếch tán R₁, R₂, R₃, R₄ bố trí trên màng silicon
-- R₁, R₃ đặt **song song** với hướng biến dạng → điện trở tăng (+ΔR)
-- R₂, R₄ đặt **vuông góc** → điện trở giảm (−ΔR)
+- R₁, R₄ đặt **song song** với hướng biến dạng → điện trở tăng ($$+\Delta R$$)
+- R₂, R₃ đặt **vuông góc** → điện trở giảm ($$-\Delta R$$)
 
 **Công thức điện áp ra:**
 
