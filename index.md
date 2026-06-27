@@ -58,5 +58,5 @@ Dự án này tập trung **khảo sát, số hóa và phân tích chuyên sâu*
 ## 🔗 Liên kết nhanh
 
 - 📦 [GitHub Repository](https://github.com/nguyenthanhthe/2526II_RBE3042_1)
-- 📄 [Datasheet BMP280](docs/references/)
+- 📄 [Tài liệu tham khảo & Datasheet](docs/references)
 - 💻 [Mã nguồn ESP32-C3](https://github.com/nguyenthanhthe/2526II_RBE3042_1/tree/master/code)
